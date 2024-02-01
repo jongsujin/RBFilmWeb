@@ -10,7 +10,11 @@ const config: Config = {
     fontFamily: {
       pre: ["pretendard"],
     },
-    colors: {},
+    colors: {
+      black: "#000000",
+      white: "#FFFFFF",
+      gray: "#707070",
+    },
     extend: {
       fontSize: {
         headline1: "22px",
