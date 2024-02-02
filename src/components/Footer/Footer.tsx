@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -25,7 +26,32 @@ function Footer() {
           <span className="pl-5">000 00 00000</span>
         </div>
       </div>
-      <div className="flex flex-col justify-center">탭</div>
+      <div className="flex flex-col justify-center">
+        <p>HOME | ABOUT | SERVICE | PORTFOLIO | PHOTO | CONTACT</p>
+
+        <div className="mt-24 mb-11 mx-auto text-start">
+          <p className="ml-32 text-headline1 font-bold">TEL</p>
+          <p className="ml-32 text-headline2">+82 10 7712 2492</p>
+        </div>
+        <div className="mx-auto text-start">
+          <p className="ml-44 text-headline1 font-bold">Email</p>
+          <p className="ml-44 text-headline2">futurewriter@naver.com</p>
+        </div>
+        <div className="w-1/2 mt-11 ml-48 flex flex-row gap-8">
+          <Image
+            src="/assets/images/instaLogo.svg"
+            alt="인스타로고"
+            width={60}
+            height={60}
+          />
+          <Image
+            src="/assets/images/youtubeLogo.svg"
+            alt="유튜브로고"
+            width={60}
+            height={60}
+          />
+        </div>
+      </div>
     </div>
   );
 }

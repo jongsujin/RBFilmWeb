@@ -4,10 +4,12 @@ import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import Essential from "@/app/contact/_component/essential.svg";
+import Footer from "@/components/Footer/Footer";
+import Border from "./_component/border.svg";
 
 function Estimate() {
   return (
-    <div className="border border-[#FFCC00]">
+    <div>
       <div className="mb-[600px]">
         <Banner />
       </div>
@@ -15,8 +17,8 @@ function Estimate() {
       <div className="mt-28 mb-48">
         <Title />
       </div>
-      <div className="border flex flex-row justify-between">
-        <div className="border w-1/2">
+      <div className="flex flex-row justify-between">
+        <div className="w-1/2">
           <p className="text-[30px] font-bold mb-[60px]">
             궁금하신 점이 있으신가요?
           </p>
@@ -30,49 +32,49 @@ function Estimate() {
           </p>
           <p className="text-headline1">좋은 인연이 되었으면 합니다.</p>
           <div>
-            <form className="border mt-[103px]">
+            <form className="w-[594px] mt-[103px]">
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">
                     업체(단체명) or 성함
                   </p>
-                  <Essential className="mt-1" />
+                  <Essential />
                 </div>
                 <input
-                  className="w-[593px] h-11 border border-white bg-black"
+                  className="w-[593px] h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">이메일</p>
-                  <Essential className="mt-1" />
+                  <Essential />
                 </div>
                 <input
-                  className="w-[593px] h-11 border border-white bg-black"
+                  className="w-[593px] h-11 border mb-7 border-white bg-black"
                   type="email"
                 />
               </div>
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">연락처</p>
-                  <Essential className="mt-1" />
+                  <Essential />
                 </div>
                 <input
-                  className="w-[593px] h-11 border border-white bg-black"
+                  className="w-[593px] h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">제작 예산</p>
-                  <Essential className="mt-1" />
+                  <Essential />
                 </div>
                 <p className="text-gray font-medium text-[15px]">
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
                 </p>
                 <input
-                  className="w-[593px] h-11 border border-white bg-black"
+                  className="w-[593px] h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
@@ -83,33 +85,55 @@ function Estimate() {
                   계신 경우 상단 메일로 보내주세요.
                 </p>
                 <input
-                  className="w-[593px] h-11 border border-white bg-black"
+                  className="w-[593px] h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">문의 사항</p>
-                  <Essential className="mt-1" />
+                  <Essential />
                 </div>
-                <textarea className="w-[593px] h-[203px] border border-white bg-black" />
+                <textarea className="w-[593px] h-[203px] mb-12 border border-white bg-black" />
               </div>
-              <button className="border" type="button">
-                등록하기
-              </button>
+              <div className="flex flex-row justify-between">
+                <div />
+                <button className="border w-24 h-11" type="button">
+                  등록하기
+                </button>
+              </div>
             </form>
           </div>
         </div>
-        <div>
-          <h1>사진1</h1>
-          <h1>텍스트</h1>
+        <div className="relative">
+          <Border />
           <Image
+            className="absolute bottom-3 left-4"
+            src="/assets/images/contactPhoto1.png"
+            width={729}
+            height={486}
+            alt="견적사진2"
+          />
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-headline1 mt-20 mb-6">
+              Opening Time / Phone Number
+            </p>
+            <p className="text-headline3">Monday ~ Friday : 00am ~ 24pm</p>
+            <p className="text-headline3">Weekend : Online Consultation</p>
+            <p className="text-headline3">TEL:+82 10 7712 2492</p>
+          </div>
+          <Border className="mt-16" />
+          <Image
+            className="absolute top-4 left-4"
             src="/assets/images/contactPhoto2.png"
-            width={500}
-            height={500}
-            alt="견적문의사진2"
+            width={729}
+            height={486}
+            alt="견적사진1"
           />
         </div>
+      </div>
+      <div className="mt-[764px]">
+        <Footer />
       </div>
     </div>
   );
