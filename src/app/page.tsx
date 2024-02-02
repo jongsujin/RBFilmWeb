@@ -1,3 +1,9 @@
+import NavBar from "@/components/NavBar/NavBar";
+
 export default function Home() {
-  return <main>홈페이지</main>;
+  return (
+    <div className="w-full h-screen">
+      <NavBar tab="HOME" />
+    </div>
+  );
 }
