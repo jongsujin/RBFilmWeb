@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+// import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "RBFilm",
@@ -20,10 +20,10 @@ export default function RootLayout({
           <Header />
         </header>
         <main>{children}</main>
-        <footer>
+        {/* <footer>
           {" "}
           <Footer />
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
