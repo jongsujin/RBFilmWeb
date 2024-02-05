@@ -3,9 +3,7 @@ import Image from "next/image";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
-import Essential from "@/app/contact/_component/essential.svg";
 import Footer from "@/components/Footer/Footer";
-import Border from "./_component/border.svg";
 
 function Estimate() {
   return (
@@ -15,7 +13,7 @@ function Estimate() {
       </div>
       <NavBar tab="CONTACT" />
       <div className="mt-28 mb-48">
-        <Title />
+        <Title title="CONTACT" content="견적 문의" />
       </div>
       <div className="flex flex-row justify-between">
         <div className="w-1/2">
@@ -38,7 +36,12 @@ function Estimate() {
                   <p className="text-headline1 font-bold">
                     업체(단체명) or 성함
                   </p>
-                  <Essential />
+                  <Image
+                    src="/assets/images/essential.svg"
+                    alt="필수사항"
+                    width={13}
+                    height={29}
+                  />
                 </div>
                 <input
                   className="w-[593px] h-11 border mb-7 border-white bg-black"
@@ -48,7 +51,12 @@ function Estimate() {
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">이메일</p>
-                  <Essential />
+                  <Image
+                    src="/assets/images/essential.svg"
+                    alt="필수사항"
+                    width={13}
+                    height={29}
+                  />
                 </div>
                 <input
                   className="w-[593px] h-11 border mb-7 border-white bg-black"
@@ -58,7 +66,12 @@ function Estimate() {
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">연락처</p>
-                  <Essential />
+                  <Image
+                    src="/assets/images/essential.svg"
+                    alt="필수사항"
+                    width={13}
+                    height={29}
+                  />
                 </div>
                 <input
                   className="w-[593px] h-11 border mb-7 border-white bg-black"
@@ -68,7 +81,12 @@ function Estimate() {
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">제작 예산</p>
-                  <Essential />
+                  <Image
+                    src="/assets/images/essential.svg"
+                    alt="필수사항"
+                    width={13}
+                    height={29}
+                  />
                 </div>
                 <p className="text-gray font-medium text-[15px]">
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
@@ -92,7 +110,12 @@ function Estimate() {
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">문의 사항</p>
-                  <Essential />
+                  <Image
+                    src="/assets/images/essential.svg"
+                    alt="필수사항"
+                    width={13}
+                    height={29}
+                  />
                 </div>
                 <textarea className="w-[593px] h-[203px] mb-12 border border-white bg-black" />
               </div>
@@ -106,7 +129,12 @@ function Estimate() {
           </div>
         </div>
         <div className="relative">
-          <Border />
+          <Image
+            src="/assets/images/border.svg"
+            width={757}
+            height={512.5}
+            alt="테두리"
+          />
           <Image
             className="absolute bottom-3 left-4"
             src="/assets/images/contactPhoto1.png"
@@ -122,7 +150,13 @@ function Estimate() {
             <p className="text-headline3">Weekend : Online Consultation</p>
             <p className="text-headline3">TEL:+82 10 7712 2492</p>
           </div>
-          <Border className="mt-16" />
+          <Image
+            className="mt-16"
+            src="/assets/images/border.svg"
+            width={757}
+            height={512.5}
+            alt="테두리"
+          />
           <Image
             className="absolute top-4 left-4"
             src="/assets/images/contactPhoto2.png"
