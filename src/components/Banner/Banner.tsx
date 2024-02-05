@@ -1,9 +1,18 @@
 import React from "react";
+import Image from "next/image";
 
-function Banner() {
+interface BannerProps {
+  bannerImage: string;
+}
+function Banner({ bannerImage }: BannerProps) {
   return (
     <div>
-      <h1>배너이미지</h1>
+      <Image
+        src={`/assets/images/${bannerImage}`}
+        width={1920}
+        height={790}
+        alt="배너이미지"
+      />
     </div>
   );
 }
