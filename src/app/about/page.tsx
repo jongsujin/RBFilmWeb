@@ -12,8 +12,8 @@ function ABOUT() {
     <div>
       <ContactHeader />
       <MainFilm />
-      <div className="relative ">
-        <div className="mb-[600px] mt-20">
+      <div className="relative">
+        <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
         </div>
         <div className="absolute bottom-[-332px] right-0 left-0">
@@ -69,7 +69,7 @@ function ABOUT() {
           R.B.FILM 대표
         </span>
       </div>
-      <div className="mt-5 flex flex-row gap-8">
+      <div className="mt-52 mb-52 flex flex-row gap-8">
         <Image
           src="/assets/images/about2.png"
           alt="소개사진2"
