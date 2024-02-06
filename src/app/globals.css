@@ -34,8 +34,8 @@ header {
 }
 main,
 footer {
-  margin-right: 154px;
-  margin-left: 154px;
+  /* margin-right: 154px;
+  margin-left: 154px; */
 }
 
 @layer utilities {

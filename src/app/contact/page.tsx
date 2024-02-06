@@ -9,13 +9,19 @@ function Estimate() {
   return (
     <div>
       <div className="mb-[600px]">
-        <Banner />
+        <div className="relative">
+          <div className="mt-20">
+            <Banner bannerImage="contact0.png" />
+          </div>
+        </div>
+        <div className="absolute bottom-[-245px] right-0 left-0">
+          <NavBar tab="CONTACT" />
+          <div className="mt-28 mb-48">
+            <Title title="CONTACT" content="견적 문의" />
+          </div>
+        </div>
       </div>
-      <NavBar tab="CONTACT" />
-      <div className="mt-28 mb-48">
-        <Title title="CONTACT" content="견적 문의" />
-      </div>
-      <div className="flex flex-row justify-between">
+      <div className="ml-[154px] mr-[154px] flex flex-row justify-between">
         <div className="w-1/2">
           <p className="text-[30px] font-bold mb-[60px]">
             궁금하신 점이 있으신가요?
