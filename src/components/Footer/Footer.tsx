@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="flex flex-row items-center text-center justify-between">
+    <div className="mr-[154px] ml-[154px] flex flex-row items-center text-center justify-between">
       <div className="flex flex-col justify-center">
         <div className="border w-56 h-24 p-8 mb-14">R.B.FILM Logo</div>
         <div className="text-start  mb-11">
