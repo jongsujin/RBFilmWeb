@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactHeader() {
   return (
-    <div className="flex flex-row justify-between mt-20">
+    <div className="flex flex-row justify-between mt-20 mr-[154px] ml-[154px]">
       <div />
       <div className="flex flex-row  border-white text-white gap-3">
         <div className="w-[103px] h-10 border border-white text-center mt-4 pt-1 text-headline2 font-medium text-white">
