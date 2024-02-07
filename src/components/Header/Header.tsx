@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Header() {
@@ -13,12 +14,20 @@ function Header() {
         </button>
       </div>
       <div className="flex flex-row gap-4 pt-[6px]">
-        <p className="cursor-pointer text-headline3 font-semibold">HOME</p>
-        <p className="cursor-pointer text-headline3 font-semibold">ABOUT</p>
-        <p className="cursor-pointer text-headline3 font-semibold">SERVICE</p>
+        <Link href="/">
+          <p className="cursor-pointer text-headline3 font-semibold">HOME</p>
+        </Link>
+        <Link href="/about">
+          <p className="cursor-pointer text-headline3 font-semibold">ABOUT</p>
+        </Link>
+        <Link href="/service">
+          <p className="cursor-pointer text-headline3 font-semibold">SERVICE</p>
+        </Link>
         <p className="cursor-pointer text-headline3 font-semibold">PORTFOLIO</p>
         <p className="cursor-pointer text-headline3 font-semibold">PHOTO</p>
-        <p className="cursor-pointer text-headline3 font-semibold">CONTACT</p>
+        <Link href="/contact">
+          <p className="cursor-pointer text-headline3 font-semibold">CONTACT</p>
+        </Link>
       </div>
     </header>
   );

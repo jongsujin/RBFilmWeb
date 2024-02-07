@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header/Header";
+import TanstackQueryProvider from "@/components/Provider/TanstackQueryProvider";
 
 export const metadata: Metadata = {
   title: "RBFilm",
@@ -18,7 +19,9 @@ export default function RootLayout({
         <header>
           <Header />
         </header>
-        <main>{children}</main>
+        <main>
+          <TanstackQueryProvider>{children}</TanstackQueryProvider>
+        </main>
       </body>
     </html>
   );

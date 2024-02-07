@@ -8,8 +8,7 @@ import Footer from "@/components/Footer/Footer";
 function Service() {
   return (
     <div>
-      <h1>서비스페이지</h1>
-      <div className="relative mt-[57px]">
+      <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>
       <div className="absolute bottom-[-188px] right-0 left-0">
@@ -65,7 +64,7 @@ function Service() {
             height={425}
           />
         </div>
-        <div className="relative w-11 max-h-[4000px] border-t border-b border-white">
+        {/* <div className="relative w-11 max-h-[4000px] border-t border-b border-white">
           <div className="w-1 h-[4000px] border-l mx-auto" />
           <div className="absolute top-[310px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
           <div className="absolute top-[945px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
@@ -73,7 +72,13 @@ function Service() {
           <div className="absolute bottom-[1740px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
           <div className="absolute bottom-[1072px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
           <div className="absolute bottom-[427px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-        </div>
+        </div> */}
+        <Image
+          src="/assets/images/dotLine.png"
+          width={40}
+          height={4000}
+          alt="점선"
+        />
         <div className="flex flex-col flex-grow-0">
           <p className="text-[40px] font-bold mt-28">제작 과정</p>
           <Image
