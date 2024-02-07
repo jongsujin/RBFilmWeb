@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import axios from "axios";
 import Image from "next/image";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
@@ -9,24 +6,9 @@ import Title from "@/components/Title/Title";
 import Footer from "@/components/Footer/Footer";
 
 function Service() {
-  const onClickTestBtn = async () => {
-    const data = await axios.get("/api/portfolio/get");
-    console.log(data?.data);
-    if (!data) {
-      throw new Error("데이터 불러오기 실패");
-    }
-    return data;
-  };
   return (
     <div>
-      <button
-        type="button"
-        onClick={onClickTestBtn}
-        className="cursor-pointer border border-[#ffcc00] h-24 w-24 bg-[#ffcc00]"
-      >
-        테스트
-      </button>
-      <div className="relative mt-[57px]">
+      <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>
       <div className="absolute bottom-[-188px] right-0 left-0">
