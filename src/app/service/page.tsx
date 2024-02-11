@@ -11,13 +11,13 @@ function Service() {
       <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>
-      <div className="absolute bottom-[-210px] right-0 left-0">
+      <div className="absolute bottom-[-11rem] right-0 left-0">
         <NavBar tab="SERVICE" />
         <div className="mt-28 mb-48">
           <Title title="SERVICE" content="" />
         </div>
       </div>
-      <div className="mt-7 mr-[154px] ml-[154px] flex flex-row">
+      <div className="mt-7 mr-40 ml-40 flex flex-row">
         <div className="flex flex-col flex-grow">
           <p className="text-[40px] text-right font-bold mt-28">Process</p>
           <p className="text-[45px] text-right font-bold mt-24">Step 01</p>
@@ -26,23 +26,23 @@ function Service() {
             <p>제작 의뢰가 들어오면 영상 목적에 따라 레퍼런스 설정을 합니다.</p>
             <p>예산과 최종 제작 일정 협의 후 미팅을 진행합니다.</p>
             <p>[필요시 온라인 미팅 대체]</p>
-            <Image
-              className="mt-[375px] ml-4"
-              src="/assets/images/service2.png"
-              alt="step01 사진"
-              width={765}
-              height={425}
-            />
           </div>
+          <Image
+            className="mt-[375px]"
+            src="/assets/images/service2.png"
+            alt="step02 사진"
+            width={765}
+            height={425}
+          />
           <div className="text-right mt-48">
-            <p className="text-[45px] font-bold">Step 03</p>
+            <p className="text-[45px] font-bold ">Step 03</p>
             <p className="text-[45px] font-bold">촬영</p>
             <p className="text-headline1 mt-14">현장 촬영을 진행합니다.</p>
           </div>
           <Image
-            className="mt-[454px] ml-4"
+            className="mt-[28.5rem]"
             src="/assets/images/service4.png"
-            alt="step01 사진"
+            alt="step04 사진"
             width={765}
             height={425}
           />
@@ -57,7 +57,7 @@ function Service() {
             </div>
           </div>
           <Image
-            className="mt-[416px] ml-4"
+            className="mt-[26rem]"
             src="/assets/images/service5.png"
             alt="step01 사진"
             width={765}
@@ -80,7 +80,7 @@ function Service() {
             width={765}
             height={425}
           />
-          <div className="mt-[168px]">
+          <div className="mt-[10.5rem]">
             <p className="text-[45px] font-bold">Step 02</p>
             <p className="text-[45px] font-bold">기획</p>
             <div className="mt-14 text-headline1">
@@ -93,7 +93,7 @@ function Service() {
             </div>
           </div>
           <Image
-            className="mt-[340px] mb-4"
+            className="mt-[21.5rem]"
             src="/assets/images/service3.png"
             alt="step01 사진"
             width={765}
@@ -108,7 +108,7 @@ function Service() {
             </div>
           </div>
           <Image
-            className="mt-[438px]"
+            className="mt-[27.5rem] mb-4"
             src="/assets/images/service5.png"
             alt="step01 사진"
             width={765}
