@@ -14,7 +14,7 @@ function Estimate() {
             <Banner bannerImage="contact0.png" />
           </div>
         </div>
-        <div className="absolute bottom-[-245px] right-0 left-0">
+        <div className="absolute bottom-[-268px] right-0 left-0">
           <NavBar tab="CONTACT" />
           <div className="mt-28 mb-48">
             <Title title="CONTACT" content="견적 문의" />
