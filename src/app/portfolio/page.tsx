@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
+import SliderItem from "./_component/SliderItem";
 
 function PortFolio() {
   return (
@@ -15,6 +16,7 @@ function PortFolio() {
           <Title title="PORTFOLIO" content="포트폴리오" />
         </div>
       </div>
+      <SliderItem />
     </div>
   );
 }
