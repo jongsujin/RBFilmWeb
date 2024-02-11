@@ -11,7 +11,7 @@ function Service() {
       <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>
-      <div className="absolute bottom-[-12.5rem] right-0 left-0">
+      <div className="absolute bottom-[-11rem] right-0 left-0">
         <NavBar tab="SERVICE" />
         <div className="mt-28 mb-48">
           <Title title="SERVICE" content="" />
@@ -28,21 +28,21 @@ function Service() {
             <p>[필요시 온라인 미팅 대체]</p>
           </div>
           <Image
-            className="mt-60"
+            className="mt-[375px]"
             src="/assets/images/service2.png"
-            alt="step01 사진"
+            alt="step02 사진"
             width={765}
             height={425}
           />
-          <div className="text-right mt-96">
+          <div className="text-right mt-48">
             <p className="text-[45px] font-bold ">Step 03</p>
             <p className="text-[45px] font-bold">촬영</p>
             <p className="text-headline1 mt-14">현장 촬영을 진행합니다.</p>
           </div>
           <Image
-            className="mt-[32rem]"
+            className="mt-[28.5rem]"
             src="/assets/images/service4.png"
-            alt="step01 사진"
+            alt="step04 사진"
             width={765}
             height={425}
           />
@@ -80,7 +80,7 @@ function Service() {
             width={765}
             height={425}
           />
-          <div className="mt-56">
+          <div className="mt-[10.5rem]">
             <p className="text-[45px] font-bold">Step 02</p>
             <p className="text-[45px] font-bold">기획</p>
             <div className="mt-14 text-headline1">
@@ -99,7 +99,7 @@ function Service() {
             width={765}
             height={425}
           />
-          <div className="mt-60">
+          <div className="mt-48">
             <p className="text-[45px] font-bold">Step 04</p>
             <p className="text-[45px] font-bold">1차 편집</p>
             <div className="mt-14 text-headline1">
@@ -108,13 +108,13 @@ function Service() {
             </div>
           </div>
           <Image
-            className="mt-[27rem] mb-4"
+            className="mt-[27.5rem] mb-4"
             src="/assets/images/service5.png"
             alt="step01 사진"
             width={765}
             height={425}
           />
-          <div className="mt-60">
+          <div className="mt-48">
             <p className="text-[45px] font-bold">Step 06</p>
             <p className="text-[45px] font-bold">완료</p>
           </div>
