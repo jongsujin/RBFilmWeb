@@ -8,13 +8,13 @@ import Footer from "@/components/Footer/Footer";
 function Estimate() {
   return (
     <div>
-      <div className="mb-[600px]">
+      <div className="mb-[38rem]">
         <div className="relative">
           <div className="mt-20">
             <Banner bannerImage="contact0.png" />
           </div>
         </div>
-        <div className="absolute bottom-[-268px] right-0 left-0">
+        <div className="absolute bottom-[-16.5rem] right-0 left-0">
           <NavBar tab="CONTACT" />
           <div className="mt-28 mb-48">
             <Title title="CONTACT" content="견적 문의" />
@@ -173,7 +173,7 @@ function Estimate() {
           />
         </div>
       </div>
-      <div className="mt-[764px]">
+      <div className="mt-[45rem]">
         <Footer />
       </div>
     </div>

@@ -16,7 +16,7 @@ function ABOUT() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
         </div>
-        <div className="absolute bottom-[-332px] right-0 left-0">
+        <div className="absolute bottom-[-20.5rem] right-0 left-0">
           <NavBar tab="ABOUT" />
           <div className="mt-28 mb-56">
             <Title title="ABOUT" content="소개" />
