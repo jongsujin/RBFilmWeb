@@ -21,9 +21,9 @@ function Estimate() {
           </div>
         </div>
       </div>
-      <div className="ml-[154px] mr-[154px] flex flex-row justify-between">
+      <div className="ml-40 mr-40 flex flex-row justify-between">
         <div className="w-1/2">
-          <p className="text-[30px] font-bold mb-[60px]">
+          <p className="text-[30px] font-bold mb-14">
             궁금하신 점이 있으신가요?
           </p>
           <p className="mb-7 text-headline1">
@@ -36,7 +36,7 @@ function Estimate() {
           </p>
           <p className="text-headline1">좋은 인연이 되었으면 합니다.</p>
           <div>
-            <form className="w-[594px] mt-[103px]">
+            <form className="w-2/3 mt-24">
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">
@@ -50,7 +50,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-[593px] h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
@@ -65,7 +65,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-[593px] h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black"
                   type="email"
                 />
               </div>
@@ -80,7 +80,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-[593px] h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
@@ -98,7 +98,7 @@ function Estimate() {
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
                 </p>
                 <input
-                  className="w-[593px] h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
@@ -109,7 +109,7 @@ function Estimate() {
                   계신 경우 상단 메일로 보내주세요.
                 </p>
                 <input
-                  className="w-[593px] h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
                 />
               </div>
@@ -123,7 +123,7 @@ function Estimate() {
                     height={29}
                   />
                 </div>
-                <textarea className="w-[593px] h-[203px] mb-12 border border-white bg-black" />
+                <textarea className="w-full h-52 mb-12 border border-white bg-black" />
               </div>
               <div className="flex flex-row justify-between">
                 <div />
@@ -134,7 +134,7 @@ function Estimate() {
             </form>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative w-1/2 h-1/6">
           <Image
             src="/assets/images/border.svg"
             width={757}
@@ -156,18 +156,19 @@ function Estimate() {
             <p className="text-headline3">Weekend : Online Consultation</p>
             <p className="text-headline3">TEL:+82 10 7712 2492</p>
           </div>
+
           <Image
             className="mt-16"
             src="/assets/images/border.svg"
-            width={757}
-            height={512.5}
+            fill
+            objectFit="cover"
             alt="테두리"
           />
           <Image
-            className="absolute top-4 left-4"
+            className="border border-[#ffcc00] "
             src="/assets/images/contactPhoto2.png"
-            width={729}
-            height={486}
+            fill
+            objectFit="cover"
             alt="견적사진1"
           />
         </div>

@@ -64,15 +64,6 @@ function Service() {
             height={425}
           />
         </div>
-        {/* <div className="relative w-11 max-h-[4000px] border-t border-b border-white">
-          <div className="w-1 h-[4000px] border-l mx-auto" />
-          <div className="absolute top-[310px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-          <div className="absolute top-[945px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-          <div className="absolute top-[1595px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-          <div className="absolute bottom-[1740px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-          <div className="absolute bottom-[1072px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-          <div className="absolute bottom-[427px] right-0 left-[0.9rem] w-3 h-3 rounded-full bg-white" />
-        </div> */}
         <Image
           className="mr-2"
           src="/assets/images/dotLine.png"

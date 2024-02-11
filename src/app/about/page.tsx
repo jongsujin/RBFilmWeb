@@ -23,15 +23,12 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className=" ml-[154px] mr-[154px]">
+      <div className="ml-40 mr-40">
         <div className="relative">
-          <Image
-            src="/assets/images/about1.png"
-            width={1920}
-            height={989}
-            alt="소개1"
-          />
-          <div className="absolute top-10 right-1 text-start">
+          <div className="w-full relative h-[900px]">
+            <Image src="/assets/images/about1.png" fill alt="소개1" />
+          </div>
+          <div className="absolute top-10 right-1 text-start md:w-1/2">
             <span className="text-[45px] font-bold"> &quot;남의 것&quot; </span>
             <span className="text-[35px] font-bold">
               {" "}
@@ -64,25 +61,20 @@ function ABOUT() {
               <br />
               <p className="mt-14">좋은 인연 되었으면 좋겠습니다.</p>
             </div>
+            <span className="absolute bottom-1 right-1 text-headline1 font-bold">
+              DOP 최정훈 <br />
+              R.B.FILM 대표
+            </span>
           </div>
-          <span className="absolute bottom-1 right-1 text-headline1 font-bold">
-            DOP 최정훈 <br />
-            R.B.FILM 대표
-          </span>
         </div>
-        <div className="mt-52 mb-52 flex flex-row gap-8">
-          <Image
-            src="/assets/images/about2.png"
-            alt="소개사진2"
-            width={805}
-            height={530}
-          />
+        <div className=" mt-52 mb-52 flex flex-row gap-8">
+          <div className="relative w-1/2">
+            <Image src="/assets/images/about2.png" alt="소개사진2" fill />
+          </div>
           <div className="flex flex-col mx-auto mt-4">
             <div className="flex flex-row gap-20 mb-[104px]">
               <p>Camera</p>
-              <p className="">
-                FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1{" "}
-              </p>
+              <p>FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1 </p>
             </div>
             <div className="flex flex-row gap-24 mb-[123px]">
               <p>Lens</p>
@@ -112,13 +104,8 @@ function ABOUT() {
         </div>
         <div className="flex flex-col">
           <div className="border flex flex-row">
-            <div className="border">
-              <Image
-                src="/assets/images/about3.png"
-                alt="소개사진3"
-                width={805}
-                height={527}
-              />
+            <div className="border relative w-1/2">
+              <Image src="/assets/images/about3.png" alt="소개사진3" fill />
             </div>
             <div className="flex-grow">
               <div className="border-b  text-center">
@@ -152,23 +139,13 @@ function ABOUT() {
                 <p>예산 내 가장 효율적인 운용을 하고 있습니다.</p>
               </div>
             </div>
-            <div className="border">
-              <Image
-                src="/assets/images/about4.png"
-                alt="소개사진4"
-                width={805}
-                height={527}
-              />
+            <div className="border relative w-1/2 h-[529px]">
+              <Image src="/assets/images/about4.png" alt="소개사진4" fill />
             </div>
           </div>
           <div className="border flex flex-row mt-60">
-            <div className="border">
-              <Image
-                src="/assets/images/about5.png"
-                alt="소개사진5"
-                width={805}
-                height={527}
-              />
+            <div className="border relative w-1/2 h-[529px]">
+              <Image src="/assets/images/about5.png" alt="소개사진5" fill />
             </div>
             <div className="border flex-grow">
               <div className="border-b  text-center">
@@ -204,13 +181,8 @@ function ABOUT() {
                 <p>좋은 작품을 위해 함께 고민합니다.</p>
               </div>
             </div>
-            <div className="border">
-              <Image
-                src="/assets/images/about6.png"
-                alt="소개사진6"
-                width={805}
-                height={527}
-              />
+            <div className="border relative w-1/2 h-[529px]">
+              <Image src="/assets/images/about6.png" alt="소개사진6" fill />
             </div>
           </div>
           <div className="mt-96 mb-32">
