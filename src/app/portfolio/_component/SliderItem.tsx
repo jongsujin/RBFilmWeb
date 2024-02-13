@@ -14,11 +14,11 @@ function SliderItem() {
   SwiperCore.use([Navigation, Autoplay]);
 
   return (
-    <div className="swiper-container">
+    <div className="">
       <Swiper
         centeredSlides
         slidesPerView={3}
-        spaceBetween={50}
+        spaceBetween={1}
         loop
         autoplay={{ delay: 5000 }}
         navigation // 이동 화살표
@@ -26,37 +26,37 @@ function SliderItem() {
           clickable: true,
         }}
         modules={[Pagination, Navigation, Autoplay]}
+        className="swiper-container w-[90%] h-[500px] mr-40 ml-40 relative mx-auto"
       >
-        <SwiperSlide>
-          <div className="w-[42rem] h-[24rem] border mx-auto items-center flex flex-row ">
-            <img
-              src="/assets/images/service4.png"
-              alt="슬라이드 사진"
-              width={672}
-              height={360}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[42rem] h-[24rem] border mx-auto items-center flex flex-row ">
-            <img
-              src="/assets/images/service4.png"
-              alt="슬라이드 사진"
-              width={896}
-              height={480}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[42rem] h-[24rem] border mx-auto items-center flex flex-row ">
-            <img
-              src="/assets/images/service4.png"
-              alt="슬라이드 사진"
-              width={672}
-              height={360}
-            />
-          </div>
-        </SwiperSlide>
+        <div>
+          <SwiperSlide className="p-4">
+            <div className="border mx-auto items-center flex flex-row ">
+              <img
+                className="w-[40rem]"
+                src="/assets/images/service4.png"
+                alt="슬라이드 사진"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="p-4">
+            <div className=" border mx-auto items-center flex flex-row ">
+              <img
+                className="w-[40rem]"
+                src="/assets/images/service4.png"
+                alt="슬라이드 사진"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="p-4">
+            <div className=" border mx-auto items-center flex flex-row ">
+              <img
+                className="w-[40rem]"
+                src="/assets/images/service4.png"
+                alt="슬라이드 사진"
+              />
+            </div>
+          </SwiperSlide>
+        </div>
       </Swiper>
     </div>
   );

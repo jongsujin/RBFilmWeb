@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       pre: ["pretendard"],
+      pt: ["PT Serif Caption"],
     },
     colors: {
       black: "#000000",

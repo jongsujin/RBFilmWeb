@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --swiper-theme-color: #ffffff !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +37,23 @@ footer {
   margin-left: 154px; */
 }
 
+.swiper-container .swiper-pagination-bullet {
+  background: white;
+  color: white;
+}
+
+.swiper-container .swiper-button-next {
+  position: absolute;
+  top: 29rem;
+  z-index: 999;
+  background-color: transparent;
+}
+.swiper-container .swiper-button-prev {
+  position: absolute;
+  top: 29rem;
+  z-index: 999;
+  background-color: transparent;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
