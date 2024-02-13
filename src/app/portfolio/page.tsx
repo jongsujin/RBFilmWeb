@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
@@ -36,15 +37,35 @@ function PortFolio() {
       </div>
       <Banner bannerImage="portfolio2.png" />
       <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10">
-        <p>Interview</p>
-        <p>Brand Film</p>
-        <p>Event Sketch</p>
-        <p>After Movie</p>
-        <p>Youtube</p>
-        <p>CF/Viral</p>
-        <p>Sports</p>
-        <p>Performance</p>
-        <p>ETC</p>
+        <p className="cursor-pointer">Interview</p>
+        <p className="cursor-pointer">Brand Film</p>
+        <p className="cursor-pointer">Event Sketch</p>
+        <p className="cursor-pointer">After Movie</p>
+        <p className="cursor-pointer">Youtube</p>
+        <p className="cursor-pointer">CF/Viral</p>
+        <p className="cursor-pointer">Sports</p>
+        <p className="cursor-pointer">Performance</p>
+        <p className="cursor-pointer">ETC</p>
+      </div>
+
+      <div className="w-[90%] mt-56 grid grid-cols-3 gap-7 mx-auto">
+        <div className="border relative w-full h-64 cursor-pointer">
+          <Image
+            src="/assets/images/portfoiloImage1.png"
+            alt="portfoilo1"
+            fill
+          />
+        </div>
+        <div className="border w-full h-64 cursor-pointer">안녕</div>
+        <div className="border w-full h-64 cursor-pointer">안녕</div>
+
+        <div className="border h-64 cursor-pointer">안녕</div>
+        <div className="border h-64 cursor-pointer">안녕</div>
+        <div className="border h-64 cursor-pointer">안녕</div>
+
+        <div className="border h-64 cursor-pointer">안녕</div>
+        <div className="border h-64 cursor-pointer">안녕</div>
+        <div className="border h-64 cursor-pointer">안녕</div>
       </div>
     </div>
   );

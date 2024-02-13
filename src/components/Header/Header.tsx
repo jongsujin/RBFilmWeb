@@ -23,7 +23,11 @@ function Header() {
         <Link href="/service">
           <p className="cursor-pointer text-headline3 font-semibold">SERVICE</p>
         </Link>
-        <p className="cursor-pointer text-headline3 font-semibold">PORTFOLIO</p>
+        <Link href="/portfolio">
+          <p className="cursor-pointer text-headline3 font-semibold">
+            PORTFOLIO
+          </p>
+        </Link>
         <p className="cursor-pointer text-headline3 font-semibold">PHOTO</p>
         <Link href="/contact">
           <p className="cursor-pointer text-headline3 font-semibold">CONTACT</p>

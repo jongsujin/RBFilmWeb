@@ -30,7 +30,7 @@ function SliderItem() {
       >
         <div>
           <SwiperSlide className="p-4">
-            <div className="border mx-auto items-center flex flex-row ">
+            <div className="mx-auto items-center flex flex-row ">
               <img
                 className="w-[40rem]"
                 src="/assets/images/service4.png"
@@ -39,7 +39,7 @@ function SliderItem() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="p-4">
-            <div className=" border mx-auto items-center flex flex-row ">
+            <div className="mx-auto items-center flex flex-row ">
               <img
                 className="w-[40rem]"
                 src="/assets/images/service4.png"
@@ -48,7 +48,7 @@ function SliderItem() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="p-4">
-            <div className=" border mx-auto items-center flex flex-row ">
+            <div className="mx-auto items-center flex flex-row ">
               <img
                 className="w-[40rem]"
                 src="/assets/images/service4.png"
