@@ -1,11 +1,25 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import SliderItem from "./_component/SliderItem";
 
 function PortFolio() {
+  const Item = {
+    id: 1,
+    ImageUrl: "/assets/images/portfolioImage1.PNG",
+    content: {
+      title:
+        "출구 없는 미로  &quot;No Exit&quot; 캠페인 by R.B.FILM feat. 김종현",
+      desc: "경찰청 주관 마약 캠페인 &quot;No Exit&quot; With DKU,김종현",
+      part: "총괄/촬영/편집",
+      by: "Sony 50 GM / Sony 16-35 GM / Cannon RF 28-70 FX9 / RED KOMODO / Sony A7S3 / Sony 70-200 GM2",
+    },
+  };
   return (
     <div>
       <div className="relative mt-20">
@@ -50,11 +64,13 @@ function PortFolio() {
 
       <div className="w-[90%] mt-56 grid grid-cols-3 gap-7 mx-auto">
         <div className="border relative w-full h-64 cursor-pointer">
-          <Image
-            src="/assets/images/portfoiloImage1.png"
-            alt="portfoilo1"
-            fill
-          />
+          <Link href={`/portfolio/item/${Item.id}`}>
+            <Image
+              src="/assets/images/portfoiloImage1.png"
+              alt="portfoilo1"
+              fill
+            />
+          </Link>
         </div>
         <div className="border w-full h-64 cursor-pointer">안녕</div>
         <div className="border w-full h-64 cursor-pointer">안녕</div>
