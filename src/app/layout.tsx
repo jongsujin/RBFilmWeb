@@ -7,11 +7,8 @@ export const metadata: Metadata = {
   title: "RBFilm",
   description: "RBFilm, Creator and Contents Director Web Site",
 };
-interface LayoutProps {
-  children: React.ReactNode;
-  modal: React.ReactNode;
-}
-export default function RootLayout({ children, modal }: LayoutProps) {
+export type RootLayoutProps = { children: React.ReactNode };
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
       <body>
@@ -19,10 +16,7 @@ export default function RootLayout({ children, modal }: LayoutProps) {
           <Header />
         </header>
         <main>
-          <TanstackQueryProvider>
-            {children}
-            {modal}
-          </TanstackQueryProvider>
+          <TanstackQueryProvider>{children}</TanstackQueryProvider>
         </main>
       </body>
     </html>

@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { LayoutProps } from "../layout";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "RBFilm",
   description: "RBFilm, Creator and Contents Director Web Site",
 };
-
-export default function PortFolioLayout({ children, modal }: LayoutProps) {
+type PortFolioLayoutProps = {
+  children: ReactNode;
+  modal: ReactNode;
+};
+export default function PortFolioLayout({
+  children,
+  modal,
+}: PortFolioLayoutProps) {
   return (
     <>
       {children}
