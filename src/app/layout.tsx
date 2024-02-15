@@ -7,14 +7,11 @@ export const metadata: Metadata = {
   title: "RBFilm",
   description: "RBFilm, Creator and Contents Director Web Site",
 };
-
-export default function RootLayout({
-  children,
-  modal,
-}: Readonly<{
+interface LayoutProps {
   children: React.ReactNode;
   modal: React.ReactNode;
-}>) {
+}
+export default function RootLayout({ children, modal }: LayoutProps) {
   return (
     <html lang="ko">
       <body>
