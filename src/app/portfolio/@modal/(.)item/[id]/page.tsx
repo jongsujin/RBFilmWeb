@@ -20,7 +20,7 @@ function PortfolioModal() {
 
   const Item = {
     id: 1,
-    ImageUrl: "/assets/images/portfoiloImage1.png",
+    ImageUrl: "/assets/images/portfolioPlayer.png",
     content: {
       title: `출구 없는 미로  &quot;No Exit&quot; 캠페인 by R.B.FILM feat. 김종현`,
       desc1: "경찰청 주관 마약 캠페인 &quot;No Exit&quot;",

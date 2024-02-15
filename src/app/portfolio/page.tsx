@@ -70,7 +70,7 @@ function PortFolio() {
           <div className="border relative w-full h-64 cursor-pointer">
             <Link href={`/portfolio/item/${Item.id}`}>
               <Image
-                src="/assets/images/portfoiloImage1.png"
+                src="/assets/images/portfolioPlayer.png"
                 alt="portfoilo1"
                 fill
               />
