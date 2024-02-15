@@ -1,10 +1,23 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import YouTube, { YouTubeProps } from "react-youtube";
 // import { useRouter } from "next/navigation";
 
 function PortfolioModal() {
+  const onPlayerReady: YouTubeProps["onReady"] = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  };
+  const opts: YouTubeProps["opts"] = {
+    height: "600",
+    width: "1200",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   const Item = {
     id: 1,
     ImageUrl: "/assets/images/portfoiloImage1.png",
@@ -23,14 +36,8 @@ function PortfolioModal() {
   // };
   return (
     <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center">
-      <div className="relative border w-[90%] h-[600px] mt-24">
-        <Image src={Item.ImageUrl} alt="포폴 예시 사진" fill />
-      </div>
-      <iframe
-        title="포폴 영상"
-        src="https://www.youtube.com/watch?v=BNmOl3FI8S0"
-      />
-      <div className="text-center mt-14">
+      <YouTube videoId="BNmOl3FI8S0" opts={opts} onReady={onPlayerReady} />
+      <div className="text-center mt-24">
         <p
           className="mb-14 text-[30px] font-medium"
           dangerouslySetInnerHTML={{ __html: Item.content.title }}

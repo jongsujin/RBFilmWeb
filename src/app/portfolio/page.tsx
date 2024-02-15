@@ -29,7 +29,7 @@ function PortFolio() {
       <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>
-      <div className="absolute bottom-[-15.5rem] right-0 left-0">
+      <div className="absolute bottom-[-9rem] right-0 left-0">
         <NavBar tab="PORTFOLIO" />
         <div className="mt-28 mb-48">
           <Title title="PORTFOLIO" content="포트폴리오" />
