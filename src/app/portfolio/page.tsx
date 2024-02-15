@@ -3,12 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import SliderItem from "./_component/SliderItem";
 
 function PortFolio() {
+  const pathname = usePathname();
+  const isItem = pathname?.includes("item");
+
   const Item = {
     id: 1,
     ImageUrl: "/assets/images/portfolioImage1.PNG",
@@ -32,7 +36,7 @@ function PortFolio() {
         </div>
       </div>
 
-      <div className="mt-40 mb-40">
+      <div className="mt-72 mb-40">
         <div className="text-center text-[25px] pt-2 font-pt">
           Make Your Film Special
         </div>
@@ -61,28 +65,29 @@ function PortFolio() {
         <p className="cursor-pointer">Performance</p>
         <p className="cursor-pointer">ETC</p>
       </div>
+      {isItem && isItem ? null : (
+        <div className="w-[90%] mt-56 grid grid-cols-3 gap-7 mx-auto">
+          <div className="border relative w-full h-64 cursor-pointer">
+            <Link href={`/portfolio/item/${Item.id}`}>
+              <Image
+                src="/assets/images/portfoiloImage1.png"
+                alt="portfoilo1"
+                fill
+              />
+            </Link>
+          </div>
+          <div className="border w-full h-64 cursor-pointer">안1녕</div>
+          <div className="border w-full h-64 cursor-pointer">안녕</div>
 
-      <div className="w-[90%] mt-56 grid grid-cols-3 gap-7 mx-auto">
-        <div className="border relative w-full h-64 cursor-pointer">
-          <Link href={`/portfolio/item/${Item.id}`}>
-            <Image
-              src="/assets/images/portfoiloImage1.png"
-              alt="portfoilo1"
-              fill
-            />
-          </Link>
+          <div className="border h-64 cursor-pointer">안녕</div>
+          <div className="border h-64 cursor-pointer">안녕</div>
+          <div className="border h-64 cursor-pointer">안녕</div>
+
+          <div className="border h-64 cursor-pointer">안녕</div>
+          <div className="border h-64 cursor-pointer">안녕</div>
+          <div className="border h-64 cursor-pointer">안녕</div>
         </div>
-        <div className="border w-full h-64 cursor-pointer">안녕</div>
-        <div className="border w-full h-64 cursor-pointer">안녕</div>
-
-        <div className="border h-64 cursor-pointer">안녕</div>
-        <div className="border h-64 cursor-pointer">안녕</div>
-        <div className="border h-64 cursor-pointer">안녕</div>
-
-        <div className="border h-64 cursor-pointer">안녕</div>
-        <div className="border h-64 cursor-pointer">안녕</div>
-        <div className="border h-64 cursor-pointer">안녕</div>
-      </div>
+      )}
     </div>
   );
 }

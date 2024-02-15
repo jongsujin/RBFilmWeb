@@ -1,7 +1,13 @@
-"use client";
+import React from "react";
 
-import PortFolio from "@/app/portfolio/page";
+import PortFolio from "../../page";
 
-export default function Page() {
-  return <PortFolio />;
+function PortFolioItem() {
+  return (
+    <div className="w-full h-screen">
+      <PortFolio />
+    </div>
+  );
 }
+
+export default PortFolioItem;

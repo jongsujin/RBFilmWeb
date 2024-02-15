@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import PortFolio from "./page";
 
 export const metadata: Metadata = {
   title: "RBFilm",
@@ -8,13 +7,14 @@ export const metadata: Metadata = {
 
 export default function PortFolioLayout({
   modal,
+  children,
 }: Readonly<{
   children: React.ReactNode;
   modal: React.ReactNode;
 }>) {
   return (
     <>
-      <PortFolio />
+      {children}
       {modal}
     </>
   );
