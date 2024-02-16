@@ -1,11 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { FormEvent, useRef } from "react";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import Footer from "@/components/Footer/Footer";
 
 function Estimate() {
+  const ref = useRef<HTMLFormElement>(null);
+
+  const onSubmitForm = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (ref.current) {
+      try {
+        emailjs.sendForm(
+          process.env.NEXT_PUBLIC_NEXT_PUBLIC_MAIL_SERVER_KEY as string,
+          process.env.NEXT_PUBLIC_MAIL_TEMPLATE_KEY as string,
+          ref.current,
+          process.env.NEXT_PUBLIC_MAIL_PRIVATE_KEY,
+        );
+        alert("소중한 의견 감사드립니다.");
+      } catch (error) {
+        alert("메시지 전송에 실패 했습니다.");
+      }
+    }
+  };
   return (
     <div>
       <div className="mb-[38rem]">
@@ -36,7 +58,7 @@ function Estimate() {
           </p>
           <p className="text-headline1">좋은 인연이 되었으면 합니다.</p>
           <div>
-            <form className="w-2/3 mt-24">
+            <form className="w-2/3 mt-24" ref={ref} onSubmit={onSubmitForm}>
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">
@@ -67,6 +89,8 @@ function Estimate() {
                 <input
                   className="w-full h-11 border mb-7 border-white bg-black"
                   type="email"
+                  name="email"
+                  required
                 />
               </div>
               <div>
@@ -82,6 +106,8 @@ function Estimate() {
                 <input
                   className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
+                  name="phoneNumber"
+                  required
                 />
               </div>
               <div>
@@ -100,6 +126,8 @@ function Estimate() {
                 <input
                   className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
+                  name="money"
+                  required
                 />
               </div>
               <div>
@@ -111,6 +139,7 @@ function Estimate() {
                 <input
                   className="w-full h-11 border mb-7 border-white bg-black"
                   type="text"
+                  name="referrence"
                 />
               </div>
               <div>
@@ -123,11 +152,19 @@ function Estimate() {
                     height={29}
                   />
                 </div>
-                <textarea className="w-full h-52 mb-12 border border-white bg-black" />
+                <textarea
+                  className="w-full h-52 mb-12 border border-white bg-black"
+                  name="message"
+                  required
+                />
               </div>
               <div className="flex flex-row justify-between">
                 <div />
-                <button className="border w-24 h-11" type="button">
+                <button
+                  className="border w-24 h-11"
+                  type="submit"
+                  value="submit"
+                >
                   등록하기
                 </button>
               </div>
