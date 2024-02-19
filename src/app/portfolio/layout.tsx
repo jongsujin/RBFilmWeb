@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "RBFilm",
@@ -17,6 +18,7 @@ export default function PortFolioLayout({
     <>
       {children}
       {modal}
+      <Footer />
     </>
   );
 }
