@@ -1,16 +1,17 @@
 "use client";
 
 import React from "react";
+import { useRecoilState } from "recoil";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import SliderItem from "./_component/SliderItem";
-import fetchAllPortfolioDatas from "@/api/fetchAllPortfolioDatas";
-import Footer from "@/components/Footer/Footer";
+import fetchPortfolioTheme from "@/api/fetchPortfolioTheme";
+import portfolioSelectedTheme from "@/recoil/atom";
 
 interface PortFolioItemProps {
   id: number;
@@ -22,6 +23,7 @@ interface PortFolioItemProps {
   second_by: string;
   url: string;
   part: string;
+  image_url: string;
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface PortFolioProps {
@@ -29,14 +31,26 @@ interface PortFolioProps {
   DATA: PortFolioItemProps[];
 }
 function PortFolio() {
+  const router = useRouter();
   const pathname = usePathname();
   const isItem = pathname?.includes("item");
+  const [selectedTheme, setSelectedTheme] = useRecoilState(
+    portfolioSelectedTheme,
+  );
+
+  const handleThemeClick = (theme: string) => {
+    setSelectedTheme(theme);
+    if (isItem) {
+      router.push("/portfolio");
+    }
+  };
 
   const { data, isLoading } = useQuery({
-    queryKey: ["fetchAllPortfolioDatas"],
-    queryFn: fetchAllPortfolioDatas,
+    queryKey: ["fetchAllPortfolioDatas", selectedTheme],
+    queryFn: () => fetchPortfolioTheme(selectedTheme),
+    enabled: !!selectedTheme,
   });
-  console.log(data);
+
   if (isLoading) {
     return <div>로딩중</div>;
   }
@@ -71,38 +85,85 @@ function PortFolio() {
       </div>
       <Banner bannerImage="portfolio2.png" />
       <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10">
-        <p className="cursor-pointer">Interview</p>
-        <p className="cursor-pointer">Brand Film</p>
-        <p className="cursor-pointer">Event Sketch</p>
-        <p className="cursor-pointer">After Movie</p>
-        <p className="cursor-pointer">Youtube</p>
-        <p className="cursor-pointer">CF/Viral</p>
-        <p className="cursor-pointer">Sports</p>
-        <p className="cursor-pointer">Performance</p>
-        <p className="cursor-pointer">ETC</p>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("Interview")}
+        >
+          Interview
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("Brand Film")}
+        >
+          Brand Film
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("Event Sketch")}
+        >
+          Event Sketch
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("After Movie")}
+        >
+          After Movie
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("Youtube")}
+        >
+          Youtube
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("CF/Viral")}
+        >
+          CF/Viral
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("Sports")}
+        >
+          Sports
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("Performance")}
+        >
+          Performance
+        </button>
+        <button
+          type="button"
+          className="cursor-pointer"
+          onClick={() => handleThemeClick("ETC")}
+        >
+          ETC
+        </button>
       </div>
       {isItem && isItem ? null : (
         <div className="w-[90%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto">
           {data &&
-            data.map((item: PortFolioProps) =>
-              item?.DATA?.map((portfolioItem: PortFolioItemProps) => (
-                <div
-                  key={portfolioItem.id}
-                  className="border relative w-[80%] h-96 cursor-pointer"
-                >
-                  <Link href={`/portfolio/item/${portfolioItem.id}`}>
-                    <Image
-                      src="/assets/images/portfolioPlayer.png"
-                      alt="portfolio1"
-                      fill
-                    />
-                  </Link>
-                </div>
-              )),
-            )}
+            data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
+              <div
+                key={portfolioItem.id}
+                className="border relative w-[80%] h-96 cursor-pointer"
+              >
+                <Link href={`/portfolio/item/${portfolioItem.id}`}>
+                  <Image src={portfolioItem.image_url} alt="portfolio1" fill />
+                </Link>
+              </div>
+            ))}
         </div>
       )}
-      <Footer />
     </div>
   );
 }
