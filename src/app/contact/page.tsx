@@ -29,7 +29,7 @@ function Estimate() {
     }
   };
   return (
-    <div>
+    <div className="w-screen">
       <div className="mb-[38rem]">
         <div className="relative">
           <div className="mt-20">

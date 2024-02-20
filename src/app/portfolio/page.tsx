@@ -55,7 +55,7 @@ function PortFolio() {
     return <div>로딩중</div>;
   }
   return (
-    <div>
+    <div className="w-screen">
       <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>

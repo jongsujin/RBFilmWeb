@@ -8,10 +8,11 @@ import Title from "@/components/Title/Title";
 import Footer from "@/components/Footer/Footer";
 import ContactHeader from "@/components/ContactHeader/ContactHeader";
 import MainFilm from "@/components/MainFilm/MainFIlm";
+import ClientItem from "./_component/ClientItem";
 
 function ABOUT() {
   return (
-    <div>
+    <div className="w-screen">
       <ContactHeader />
       <MainFilm />
       <div className="relative">
@@ -185,6 +186,20 @@ function ABOUT() {
             </div>
             <div className="border relative w-1/2 h-[529px]">
               <Image src="/assets/images/about6.png" alt="소개사진6" fill />
+            </div>
+          </div>
+          <div className="mt-80">
+            <Title title="CLIENTS" content="고객사" />
+            <div className="mt-40  grid grid-cols-6">
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
+              <ClientItem />
             </div>
           </div>
           <div className="mt-96 mb-32">

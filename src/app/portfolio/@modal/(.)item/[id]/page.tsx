@@ -14,7 +14,7 @@ import fetchPortfolioItem from "@/api/fetchPortfolioItem";
 function PortfolioModal() {
   const selectedTheme = useRecoilValue(portfolioSelectedTheme);
   const pathname = usePathname();
-  const id = parseInt(pathname.split("/").pop() || "", 10);
+  const id = parseInt(pathname?.split("/").pop() || "", 10);
 
   const { data } = useQuery({
     queryKey: ["fetchPortfolioItem", id],
