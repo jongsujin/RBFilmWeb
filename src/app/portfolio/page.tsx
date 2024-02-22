@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,6 +19,7 @@ interface PortFolioItemProps {
   sub_title: string;
   first_content: string;
   second_content: string;
+  third_content: string;
   first_by: string;
   second_by: string;
   url: string;
@@ -38,12 +39,26 @@ function PortFolio() {
     portfolioSelectedTheme,
   );
 
-  const handleThemeClick = (theme: string) => {
+  const handleThemeClick = (
+    theme: string,
+    event: React.MouseEvent<HTMLButtonElement>,
+  ) => {
+    event.preventDefault();
+    const scrollPosition = window.scrollY.toString();
+    sessionStorage.setItem("scrollPosition", scrollPosition); // sessionStorage 사용
     setSelectedTheme(theme);
     if (isItem) {
       router.push("/portfolio");
     }
   };
+
+  useEffect(() => {
+    // 의존성 배열 비움
+    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition, 10));
+    }
+  }, []);
 
   const { data, isLoading } = useQuery({
     queryKey: ["fetchAllPortfolioDatas", selectedTheme],
@@ -88,63 +103,49 @@ function PortFolio() {
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("Interview")}
+          onClick={(e) => handleThemeClick("Interview", e)}
         >
           Interview
         </button>
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("Brand Film")}
-        >
-          Brand Film
-        </button>
-        <button
-          type="button"
-          className="cursor-pointer"
-          onClick={() => handleThemeClick("Event Sketch")}
+          onClick={(e) => handleThemeClick("Event Sketch", e)}
         >
           Event Sketch
         </button>
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("After Movie")}
+          onClick={(e) => handleThemeClick("After Movie", e)}
         >
           After Movie
         </button>
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("Youtube")}
+          onClick={(e) => handleThemeClick("Youtube", e)}
         >
           Youtube
         </button>
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("CF/Viral")}
+          onClick={(e) => handleThemeClick("Viral", e)}
         >
-          CF/Viral
+          Brand Film / Viral
         </button>
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("Sports")}
-        >
-          Sports
-        </button>
-        <button
-          type="button"
-          className="cursor-pointer"
-          onClick={() => handleThemeClick("Performance")}
+          onClick={(e) => handleThemeClick("Performance", e)}
         >
           Performance
         </button>
         <button
           type="button"
           className="cursor-pointer"
-          onClick={() => handleThemeClick("ETC")}
+          onClick={(e) => handleThemeClick("ETC", e)}
         >
           ETC
         </button>
