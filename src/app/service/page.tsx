@@ -7,7 +7,7 @@ import Footer from "@/components/Footer/Footer";
 
 function Service() {
   return (
-    <div>
+    <div className="w-screen">
       <div className="relative mt-20">
         <Banner bannerImage="service0.png" />
       </div>
