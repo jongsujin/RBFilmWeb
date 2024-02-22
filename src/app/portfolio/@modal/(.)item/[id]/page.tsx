@@ -42,7 +42,8 @@ function PortfolioModal() {
         ) : null}
         <p className="text-headline1">{data?.first_content}</p>
         <p className="text-headline1">{data?.second_content}</p>
-        <p className="font-bold text-headline1">Part</p>
+        <p className="text-headline1">{data?.third_content}</p>
+        <p className="mt-14 last:font-bold text-headline1">Part</p>
         <p className="mb-14 text-headline1">{data?.part}</p>
 
         <p className="font-bold text-headline1">By</p>

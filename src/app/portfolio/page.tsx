@@ -14,16 +14,16 @@ import fetchPortfolioTheme from "@/api/fetchPortfolioTheme";
 import portfolioSelectedTheme from "@/recoil/atom";
 
 interface PortFolioItemProps {
-  id: number;
-  title: string;
-  sub_title: string;
-  first_content: string;
-  second_content: string;
-  third_content: string;
-  first_by: string;
-  second_by: string;
-  url: string;
-  part: string;
+  id?: number;
+  title?: string;
+  sub_title?: string;
+  first_content?: string;
+  second_content?: string;
+  third_content?: string;
+  first_by?: string;
+  second_by?: string;
+  url?: string;
+  part?: string;
   image_url: string;
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
