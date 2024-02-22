@@ -28,7 +28,9 @@ function Header() {
             PORTFOLIO
           </p>
         </Link>
-        <p className="cursor-pointer text-headline3 font-semibold">PHOTO</p>
+        <Link href="/photo">
+          <p className="cursor-pointer text-headline3 font-semibold">PHOTO</p>
+        </Link>
         <Link href="/contact">
           <p className="cursor-pointer text-headline3 font-semibold">CONTACT</p>
         </Link>
