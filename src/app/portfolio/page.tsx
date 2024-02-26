@@ -53,7 +53,6 @@ function PortFolio() {
   };
 
   useEffect(() => {
-    // 의존성 배열 비움
     const savedScrollPosition = sessionStorage.getItem("scrollPosition");
     if (savedScrollPosition) {
       window.scrollTo(0, parseInt(savedScrollPosition, 10));
@@ -158,8 +157,11 @@ function PortFolio() {
                 key={portfolioItem.id}
                 className="border relative w-[80%] h-96 cursor-pointer"
               >
+                <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
-                  <Image src={portfolioItem.image_url} alt="portfolio1" fill />
+                  <div className="absolute w-8 h-8 bottom-52 left-52">
+                    재생버튼{" "}
+                  </div>
                 </Link>
               </div>
             ))}
