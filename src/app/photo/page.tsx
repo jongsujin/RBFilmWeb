@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-// import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
-// import fetchPortfolioTheme from "@/api/fetchPortfolioTheme";
+import fetchPhotoItem from "@/api/fetchPhotoItem";
 
 function Photo() {
   const [currentTab, setCurrentTab] = useState("Festival Photo");
@@ -15,15 +15,16 @@ function Photo() {
     setSelectedPhotoTheme(theme);
     setCurrentTab(theme);
   };
-  // const { data, isLoading } = useQuery({
-  //   queryKey: ["fetchAllPortfolioDatas", selectedPhotoTheme],
-  //   queryFn: () => fetchPortfolioTheme(selectedPhotoTheme),
-  //   enabled: !!selectedPhotoTheme,
-  // });
-  // if (isLoading) {
-  //   return <div>로딩중</div>;
-  // }
-  // console.log(data);
+  const { data, isLoading } = useQuery({
+    queryKey: ["fetchPhotoItem", selectedPhotoTheme],
+    queryFn: () => fetchPhotoItem({ THEME: selectedPhotoTheme }), // 객체를 전달
+    enabled: !!selectedPhotoTheme,
+  });
+
+  if (isLoading) {
+    return <div>로딩중</div>;
+  }
+  console.log(data);
   return (
     <div className="w-screen">
       <div className="relative mt-20">
@@ -67,7 +68,7 @@ function Photo() {
         <button
           type="button"
           className={`text-white font-medium text-headline3 cursor-pointer ${currentTab === "ETC" ? "border-b-2 border-white" : ""}`}
-          onClick={() => handlePhotoThemeClick("ETC")}
+          onClick={() => handlePhotoThemeClick("ETC Photo")}
         >
           ETC
         </button>

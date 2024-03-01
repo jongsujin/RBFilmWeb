@@ -1,8 +1,8 @@
-import { FetchPortfolioItemProps } from "@/types/fetchPortfolioItemType";
-// res 수정 필요
-const fetchPhotoItem = async ({ THEME, id }: FetchPortfolioItemProps) => {
+import { FetchPhotoItemProps } from "@/types/fetchPhotoItemType";
+
+const fetchPhotoItem = async ({ THEME }: FetchPhotoItemProps) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_AWS_API_URL}/items/${THEME}/${id}`,
+    `${process.env.NEXT_PUBLIC_AWS_PHOTO_API_URL}/items/${THEME}`,
   );
   if (!res.ok) {
     throw new Error(res.statusText);
