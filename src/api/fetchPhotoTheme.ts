@@ -4,7 +4,7 @@ const fetchPhotoTheme = async (THEME: string) => {
     `${process.env.NEXT_PUBLIC_AWS_API_URL}/items/${THEME}`,
   );
   if (!res.ok) {
-    throw new Error(res.statusText);
+    throw new Error("Error");
   }
   const data = await res.json();
   return data;
