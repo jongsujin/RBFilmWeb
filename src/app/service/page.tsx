@@ -8,13 +8,15 @@ import Footer from "@/components/Footer/Footer";
 function Service() {
   return (
     <div className="w-screen">
-      <div className="relative mt-20">
-        <Banner bannerImage="service0.png" />
-      </div>
-      <div className="absolute bottom-[-11rem] right-0 left-0">
-        <NavBar tab="SERVICE" />
-        <div className="mt-28 mb-48">
-          <Title title="SERVICE" content="" />
+      <div className="relative">
+        <div className="mt-20 mb-60">
+          <Banner bannerImage="service0.png" />
+        </div>
+        <div className="absolute bottom-[-16.6rem] right-0 left-0">
+          <NavBar tab="PHOTO" />
+          <div className="mt-28 mb-56">
+            <Title title="SERVICE" content="" />
+          </div>
         </div>
       </div>
       <div className="mt-7 mr-40 ml-40 flex flex-row">

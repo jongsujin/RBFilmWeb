@@ -202,8 +202,14 @@ function ABOUT() {
               <ClientItem />
             </div>
           </div>
-          <div className="mt-96 mb-32">
+          <div className="mt-96 mb-32 relative h-screen">
             <Title title="BIOGRAPHY" content="연혁" />
+            <Image
+              src="/assets/images/biographyBanner.png"
+              alt="연혁 사진"
+              className=" absolute mt-40"
+              fill
+            />
           </div>
         </div>
       </div>

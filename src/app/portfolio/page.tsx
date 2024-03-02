@@ -70,13 +70,15 @@ function PortFolio() {
   }
   return (
     <div className="w-screen">
-      <div className="relative mt-20">
-        <Banner bannerImage="service0.png" />
-      </div>
-      <div className="absolute bottom-[-9rem] right-0 left-0">
-        <NavBar tab="PORTFOLIO" />
-        <div className="mt-28 mb-48">
-          <Title title="PORTFOLIO" content="포트폴리오" />
+      <div className="relative">
+        <div className="mt-20 mb-60">
+          <Banner bannerImage="portfolioBanner.png" />
+        </div>
+        <div className="absolute bottom-[-20.5rem] right-0 left-0">
+          <NavBar tab="PHOTO" />
+          <div className="mt-28 mb-56">
+            <Title title="PORTFOLIO" content="포트폴리오" />
+          </div>
         </div>
       </div>
 
@@ -159,9 +161,12 @@ function PortFolio() {
               >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
-                  <div className="absolute w-8 h-8 bottom-52 left-52">
-                    재생버튼{" "}
-                  </div>
+                  <Image
+                    src="/assets/images/playerBtn.png"
+                    alt="재생버튼"
+                    fill
+                    className="absolute w-8 h-8 bottom-52 left-52"
+                  />
                 </Link>
               </div>
             ))}

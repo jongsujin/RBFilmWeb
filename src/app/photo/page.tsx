@@ -38,13 +38,15 @@ function Photo() {
   console.log(data.DATA);
   return (
     <div className="w-screen">
-      <div className="relative mt-20">
-        <Banner bannerImage="photoBanner.png" />
-      </div>
-      <div className="absolute bottom-[-12.5rem] right-0 left-0">
-        <NavBar tab="PHOTO" />
-        <div className="mt-28 mb-48">
-          <Title title="PHOTO" content="" />
+      <div className="relative">
+        <div className="mt-20 mb-60">
+          <Banner bannerImage="photoBanner.png" />
+        </div>
+        <div className="absolute bottom-[-16.6rem] right-0 left-0">
+          <NavBar tab="PHOTO" />
+          <div className="mt-28 mb-56">
+            <Title title="PHOTO" content="" />
+          </div>
         </div>
       </div>
       <div className="w-full border-t border-b flex flex-row justify-center gap-28 text-center mt-56 p-10">
