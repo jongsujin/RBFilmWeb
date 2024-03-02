@@ -1,15 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import fetchPhotoItem from "@/api/fetchPhotoItem";
+import Footer from "@/components/Footer/Footer";
+
+interface PhotoItemProps {
+  photo_id: number;
+  photo_title: string;
+  photo_subtitle?: string;
+  photo_url?: string[];
+}
 
 function Photo() {
   const [currentTab, setCurrentTab] = useState("Festival Photo");
-  const [selectedPhotoTheme, setSelectedPhotoTheme] = useState("");
+  const [selectedPhotoTheme, setSelectedPhotoTheme] =
+    useState("Festival Photo");
   console.log(selectedPhotoTheme);
   const handlePhotoThemeClick = (theme: string) => {
     setSelectedPhotoTheme(theme);
@@ -25,6 +35,7 @@ function Photo() {
     return <div>로딩중</div>;
   }
   console.log(data);
+  console.log(data.DATA);
   return (
     <div className="w-screen">
       <div className="relative mt-20">
@@ -73,40 +84,34 @@ function Photo() {
           ETC
         </button>
       </div>
-      <div className="w-full flex flex-col items-center">
-        <p className="text-[#707070] font-bold text-[220px] mt-24">
-          Indie Music
-        </p>
-        <p className="text-[25px] font-medium mb-8">Indie Music</p>
-        <div className="w-full max-w-[80%] grid grid-cols-2 gap-32">
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
+      {data?.DATA?.map((photoItem: PhotoItemProps) => (
+        <div
+          key={photoItem.photo_id}
+          className="w-full mb-96 flex flex-col items-center"
+        >
+          <p className="text-[#707070] font-bold text-9xl mt-24">
+            {photoItem.photo_title}
+          </p>
+          <p className="text-[25px] font-medium mb-8">
+            {photoItem.photo_subtitle}
+          </p>
+          <div className="relative w-full max-w-[80%] grid grid-cols-2 gap-32">
+            {photoItem.photo_url?.map((url: string, index: number) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={index} className="h-[28rem] relative">
+                <Image
+                  src={url}
+                  alt="포토 사진"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="w-full flex flex-col items-center">
-        <p className="text-[#707070] font-bold text-[220px] mt-24">JUMF</p>
-        <p className="text-[25px] font-medium mb-8">JUMF</p>
-        <div className="w-full max-w-[80%] grid grid-cols-2 gap-32">
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-        </div>
-      </div>
-      <div className="w-full flex flex-col items-center">
-        <p className="text-[#707070] font-bold text-[220px] mt-24">Micro</p>
-        <p className="text-[25px] font-medium mb-8">Micro</p>
-        <div className="w-full max-w-[80%] grid grid-cols-2 gap-32">
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-          <div className="h-[28rem] border border-white bg-gray" />
-        </div>
-      </div>
+      ))}
+      <Footer />
     </div>
   );
 }
