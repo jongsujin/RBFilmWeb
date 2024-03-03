@@ -2,15 +2,26 @@
 
 import React from "react";
 import Image from "next/image";
+import { useQuery } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import Footer from "@/components/Footer/Footer";
 import ContactHeader from "@/components/ContactHeader/ContactHeader";
 import MainFilm from "@/components/MainFilm/MainFIlm";
+import fetchClientData from "@/api/fetchClientData";
 import ClientItem from "./_component/ClientItem";
+import { ClientProps } from "@/types/clientItemType";
 
 function ABOUT() {
+  const { data, isLoading } = useQuery({
+    queryKey: ["fetchClientData"],
+    queryFn: () => fetchClientData("Client"),
+  });
+  if (isLoading) {
+    <div>로딩중..</div>;
+  }
+  console.log(data?.DATA);
   return (
     <div className="w-screen">
       <ContactHeader />
@@ -191,15 +202,11 @@ function ABOUT() {
           <div className="mt-80">
             <Title title="CLIENTS" content="고객사" />
             <div className="mt-40  grid grid-cols-6">
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
+              {data?.DATA?.map((client: ClientProps) => (
+                <div key={client.id}>
+                  <ClientItem title={client.title} url={client.image_url} />
+                </div>
+              ))}
             </div>
           </div>
           <div className="mt-96 mb-32 relative h-screen">
