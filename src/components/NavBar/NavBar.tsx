@@ -8,7 +8,7 @@ function NavBar({ tab }: NavBarProps) {
   return (
     <div className="mx-auto  w-1/2">
       <ul className="flex flex-row list-none gap-5 text-headline3 text-white font-semibold justify-center ">
-        <Link href="/">
+        <Link href="/about">
           <button
             type="button"
             className={`text-white font-medium text-headline3 ${tab === "HOME" ? "border-b-2 border-white" : ""}`}

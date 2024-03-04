@@ -12,7 +12,6 @@ import MainFilm from "@/components/MainFilm/MainFIlm";
 import fetchClientData from "@/api/fetchClientData";
 import ClientItem from "./_component/ClientItem";
 import { ClientProps } from "@/types/clientItemType";
-import Biography from "./_component/Biography";
 import fetchMainfilmData from "@/api/fetchMainfilmData";
 
 function ABOUT() {
@@ -230,7 +229,14 @@ function ABOUT() {
           </div>
 
           <Title title="BIOGRAPHY" content="연혁" />
-          <Biography width="1200" height="1200" />
+
+          <Image
+            className="mx-auto"
+            src="/assets/images/biography.svg"
+            alt="바이오그래피"
+            width={1400}
+            height={600}
+          />
         </div>
       </div>
       <div className="mt-[764px]">
