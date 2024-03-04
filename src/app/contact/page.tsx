@@ -30,16 +30,14 @@ function Estimate() {
   };
   return (
     <div className="w-screen">
-      <div className="mb-[38rem]">
-        <div className="relative">
-          <div className="mt-20">
-            <Banner bannerImage="contact0.png" />
-          </div>
+      <div className="relative">
+        <div className="mt-20 mb-60">
+          <Banner bannerImage="about0.png" />
         </div>
-        <div className="absolute bottom-[-15rem] right-0 left-0">
-          <NavBar tab="CONTACT" />
-          <div className="mt-28 mb-48">
-            <Title title="CONTACT" content="견적 문의" />
+        <div className="absolute bottom-[-20.5rem] right-0 left-0">
+          <NavBar tab="ABOUT" />
+          <div className="mt-28 mb-56">
+            <Title title="CONTACT" content="견적문의" />
           </div>
         </div>
       </div>
@@ -171,21 +169,15 @@ function Estimate() {
             </form>
           </div>
         </div>
-        <div className="relative w-1/2 h-1/6">
+        <div className="w-1/2 ml-20">
           <Image
-            src="/assets/images/border.svg"
-            width={757}
-            height={512.5}
-            alt="테두리"
-          />
-          <Image
-            className="absolute bottom-3 left-4"
-            src="/assets/images/contactPhoto1.png"
+            className=""
+            src="/assets/images/contact1.svg"
             width={729}
-            height={486}
-            alt="견적사진2"
+            height={540}
+            alt="견적사진1"
           />
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center mb-20">
             <p className="text-headline1 mt-20 mb-6">
               Opening Time / Phone Number
             </p>
@@ -195,18 +187,11 @@ function Estimate() {
           </div>
 
           <Image
-            className="mt-16"
-            src="/assets/images/border.svg"
-            fill
-            objectFit="cover"
-            alt="테두리"
-          />
-          <Image
-            className="border border-[#ffcc00] "
-            src="/assets/images/contactPhoto2.png"
-            fill
-            objectFit="cover"
-            alt="견적사진1"
+            className=""
+            src="/assets/images/contact2.svg"
+            width={729}
+            height={540}
+            alt="견적사진2"
           />
         </div>
       </div>

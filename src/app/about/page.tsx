@@ -2,19 +2,48 @@
 
 import React from "react";
 import Image from "next/image";
+import { useQueries } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import Footer from "@/components/Footer/Footer";
 import ContactHeader from "@/components/ContactHeader/ContactHeader";
 import MainFilm from "@/components/MainFilm/MainFIlm";
+import fetchClientData from "@/api/fetchClientData";
 import ClientItem from "./_component/ClientItem";
+import { ClientProps } from "@/types/clientItemType";
+import fetchMainfilmData from "@/api/fetchMainfilmData";
 
 function ABOUT() {
+  const results = useQueries({
+    queries: [
+      {
+        queryKey: ["fetchClientData"],
+        queryFn: () => fetchClientData("Client"),
+        refetchOnWindowFocus: false,
+        staleTime: Infinity,
+      },
+      {
+        queryKey: ["fetchMainfilm"],
+        queryFn: () => fetchMainfilmData("Mainfilm"),
+        refetchOnWindowFocus: false,
+        staleTime: Infinity,
+      },
+    ],
+  });
+  const clientData = results[0]?.data;
+  console.log(clientData);
+  const mainfilmData = results[1]?.data;
+  console.log(mainfilmData);
+  const isLoading = results.some((queryResult) => queryResult.isLoading);
+
+  if (isLoading) {
+    return <div>로딩중..</div>;
+  }
   return (
     <div className="w-screen">
       <ContactHeader />
-      <MainFilm />
+      <MainFilm filmUrl={mainfilmData?.url} />
       <div className="relative">
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
@@ -191,20 +220,23 @@ function ABOUT() {
           <div className="mt-80">
             <Title title="CLIENTS" content="고객사" />
             <div className="mt-40  grid grid-cols-6">
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
+              {clientData?.DATA?.map((client: ClientProps) => (
+                <div key={client.id}>
+                  <ClientItem title={client.title} url={client.image_url} />
+                </div>
+              ))}
             </div>
           </div>
-          <div className="mt-96 mb-32">
-            <Title title="BIOGRAPHY" content="연혁" />
-          </div>
+
+          <Title title="BIOGRAPHY" content="연혁" />
+
+          <Image
+            className="mx-auto"
+            src="/assets/images/biography.svg"
+            alt="바이오그래피"
+            width={1400}
+            height={600}
+          />
         </div>
       </div>
       <div className="mt-[764px]">
