@@ -233,7 +233,7 @@ function ABOUT() {
           <Image
             className="mx-auto"
             src="/assets/images/biography.svg"
-            alt="연혁사진"
+            alt="연혁 사진"
             width={1400}
             height={600}
           />
