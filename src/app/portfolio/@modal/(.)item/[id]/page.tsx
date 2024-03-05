@@ -24,17 +24,21 @@ function PortfolioModal() {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
   };
+
   const opts: YouTubeProps["opts"] = {
-    height: "600",
-    width: "1200",
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
-
   return (
     <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center">
-      <YouTube videoId={data?.url} opts={opts} onReady={onPlayerReady} />
+      <YouTube
+        className="mt-20"
+        videoId={data?.url}
+        opts={opts}
+        onReady={onPlayerReady}
+      />
+
       <div className="text-center mt-24">
         <p className="mb-14 text-[30px] font-medium">{data?.title}</p>
         {data?.sub_title ? (
@@ -45,10 +49,11 @@ function PortfolioModal() {
         <p className="text-headline1">{data?.third_content}</p>
         <p className="mt-14 last:font-bold text-headline1">Part</p>
         <p className="mb-14 text-headline1">{data?.part}</p>
-
-        <p className="font-bold text-headline1">By</p>
-        <p className="text-headline1">{data?.first_by}</p>
-        <p className="text-headline1">{data?.second_by}</p>
+        <div className="mb-14">
+          <p className="font-bold text-headline1">By</p>
+          <p className="text-headline1">{data?.first_by}</p>
+          <p className="text-headline1">{data?.second_by}</p>
+        </div>
       </div>
     </div>
   );

@@ -18,7 +18,9 @@ export default function PortFolioLayout({
     <>
       {children}
       {modal}
-      <Footer />
+      <div className="mt-56">
+        <Footer />
+      </div>
     </>
   );
 }
