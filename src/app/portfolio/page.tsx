@@ -74,8 +74,8 @@ function PortFolio() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="portfolioBanner.png" />
         </div>
-        <div className="absolute bottom-[-20.5rem] right-0 left-0">
-          <NavBar tab="PHOTO" />
+        <div className="absolute bottom-[-20rem] right-0 left-0">
+          <NavBar tab="PORTFOLIO" />
           <div className="mt-28 mb-56">
             <Title title="PORTFOLIO" content="포트폴리오" />
           </div>
@@ -155,15 +155,15 @@ function PortFolio() {
         <div className="w-[90%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto">
           {data &&
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
-              <div key={portfolioItem.id} className="border relative h-96">
+              <div key={portfolioItem.id} className="border relative h-72">
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
                   <Image
                     src="/assets/images/playerBtn32.svg"
                     alt="재생버튼"
-                    width={64}
-                    height={64}
-                    className="absolute top-[45%] left-[45%]"
+                    width={48}
+                    height={48}
+                    className="absolute top-[40%] left-[45%]"
                   />
                 </Link>
               </div>

@@ -48,7 +48,7 @@ function ABOUT() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
         </div>
-        <div className="absolute bottom-[-20.5rem] right-0 left-0">
+        <div className="absolute bottom-[-20rem] right-0 left-0">
           <NavBar tab="ABOUT" />
           <div className="mt-28 mb-56">
             <Title title="ABOUT" content="소개" />
@@ -60,7 +60,7 @@ function ABOUT() {
           <div className="w-full relative h-[900px]">
             <Image src="/assets/images/about1.png" fill alt="소개1" />
           </div>
-          <div className="absolute top-10 right-1 text-start md:w-1/2">
+          <div className="absolute top-10 right-[-2rem]  w-[55%] text-start">
             <span className="text-[45px] font-bold"> &quot;남의 것&quot; </span>
             <span className="text-[35px] font-bold">
               {" "}
@@ -76,7 +76,7 @@ function ABOUT() {
               제작한다는 마인드로 함께합니다.
             </p>
             <br />
-            <p className="text-[30px] font-bold mt-12">
+            <p className="text-[28px] font-bold mt-12">
               클라이언트가 보고 있는 &quot;일상&quot;에
               <br />
               R.B.FILM의 &quot;새로운 시선&quot;을 더해 더 나은 방향을 고민하고
@@ -87,23 +87,23 @@ function ABOUT() {
               트랜디한 감성, 역동적인 무빙, 시네마틱한 색감 구현 등 <br />{" "}
               R.B.FILM만의 색깔과 각 분야 전문 인력들의 경험이 결합되어 최고의
               결과물을 약속드립니다.
-              <br />
-              <span className="text-[30px] font-bold">지속적인 파트너</span>로
+              <br />한 번의 비즈니스가 아닌{" "}
+              <span className="text-[30px] font-bold">지속적인 파트너</span> 로
               함께 성장하기를 바랍니다.
               <br />
               <p className="mt-14">좋은 인연 되었으면 좋겠습니다.</p>
             </div>
-            <span className="absolute bottom-1 right-1 text-headline1 font-bold">
+            <span className="absolute bottom-[-6rem] right-1 text-headline1 font-bold">
               DOP 최정훈 <br />
               R.B.FILM 대표
             </span>
           </div>
         </div>
-        <div className=" mt-52 mb-52 flex flex-row gap-8">
+        <div className=" mt-52 mb-52 flex flex-row gap-16">
           <div className="relative w-1/2">
             <Image src="/assets/images/about2.png" alt="소개사진2" fill />
           </div>
-          <div className="flex flex-col mx-auto mt-4">
+          <div className="flex flex-col mx-auto mt-4 text-[20px]">
             <div className="flex flex-row gap-20 mb-[104px]">
               <p>Camera</p>
               <p>FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1 </p>
@@ -140,13 +140,13 @@ function ABOUT() {
               <Image src="/assets/images/about3.png" alt="소개사진3" fill />
             </div>
             <div className="flex-grow">
-              <div className="border-b  text-center">
+              <div className="border-b  text-center pt-2 pb-2">
                 <p className="font-bold text-[35px]">
-                  <span className="text-[45px] font-bold">01</span> 체계적이지만
+                  <span className="text-[35px] font-bold">01</span> 체계적이지만
                   유연함
                 </p>
               </div>
-              <div className="text-headline1 text-center font-medium mt-32">
+              <div className="text-headline1 text-center font-medium mt-36">
                 <p>넓은 스펙트럼을 보유한 젊은 인력풀을 구성해</p>
                 <p>현장에 따른 유연한 대처를 가능하게 합니다.</p>
               </div>
@@ -160,11 +160,11 @@ function ABOUT() {
             <div className="border flex-grow">
               <div className="border-b  text-center">
                 <p className="font-bold text-[35px]">
-                  <span className="text-[45px] font-bold">02</span> 합리적인
+                  <span className="text-[35px] font-bold">02</span> 합리적인
                   견적
                 </p>
               </div>
-              <div className="text-headline1 text-center font-medium mt-32">
+              <div className="text-headline1 text-center font-medium mt-36">
                 <p>내부적으로 하이앤드 카메라 [Red Komodo / FX9 / Ronin4D]를</p>
                 <p>운용하고 있으며 촬영 목적에 맞는 투입은 물론,</p>
                 <p>불필요한 인력을 최소화하여</p>
@@ -182,11 +182,11 @@ function ABOUT() {
             <div className="border flex-grow">
               <div className="border-b  text-center">
                 <p className="font-bold text-[35px]">
-                  <span className="text-[45px] font-bold">03</span> 다양한
+                  <span className="text-[35px] font-bold">03</span> 다양한
                   전문가와의 협력
                 </p>
               </div>
-              <div className="text-headline1 text-center font-medium mt-32">
+              <div className="text-headline1 text-center font-medium mt-36">
                 <p>
                   동시 오디오 감독, 드론 촬영 감독, 작가, 자막 등 종편 편집자,
                 </p>
@@ -200,11 +200,11 @@ function ABOUT() {
             <div className="border flex-grow">
               <div className="border-b  text-center">
                 <p className="font-bold text-[35px]">
-                  <span className="text-[45px] font-bold">04</span> 적극적인
+                  <span className="text-[35px] font-bold">04</span> 적극적인
                   제안
                 </p>
               </div>
-              <div className="text-headline1 text-center font-medium mt-32">
+              <div className="text-headline1 text-center font-medium mt-36">
                 <p>레퍼런스 및 클라이언트의 니즈 반영은 물론,</p>
                 <p>디벨롭을 위한 더 나은 방향을 제안해 드립니다.</p>
               </div>

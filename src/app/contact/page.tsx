@@ -34,8 +34,8 @@ function Estimate() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
         </div>
-        <div className="absolute bottom-[-20.5rem] right-0 left-0">
-          <NavBar tab="ABOUT" />
+        <div className="absolute bottom-[-20rem] right-0 left-0">
+          <NavBar tab="CONTACT" />
           <div className="mt-28 mb-56">
             <Title title="CONTACT" content="견적문의" />
           </div>
@@ -70,7 +70,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
                   type="text"
                 />
               </div>
@@ -85,7 +85,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
                   type="email"
                   name="email"
                   required
@@ -102,7 +102,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
                   type="text"
                   name="phoneNumber"
                   required
@@ -122,7 +122,7 @@ function Estimate() {
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
                 </p>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
                   type="text"
                   name="money"
                   required
@@ -135,7 +135,7 @@ function Estimate() {
                   계신 경우 상단 메일로 보내주세요.
                 </p>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black"
+                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
                   type="text"
                   name="referrence"
                 />
@@ -151,7 +151,7 @@ function Estimate() {
                   />
                 </div>
                 <textarea
-                  className="w-full h-52 mb-12 border border-white bg-black"
+                  className="w-full h-52 mb-12 border border-white bg-black pl-2"
                   name="message"
                   required
                 />
