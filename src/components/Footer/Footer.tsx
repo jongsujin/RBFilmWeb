@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="mr-[154px] ml-[154px] flex flex-row items-center text-center justify-between">
+    <div className="mr-16 ml-16 flex flex-row items-center text-center justify-between">
       <div className="flex flex-col justify-center">
         <div className="border w-56 h-24 p-8 mb-14">R.B.FILM Logo</div>
         <div className="text-start  mb-11">
@@ -27,8 +27,6 @@ function Footer() {
         </div>
       </div>
       <div className="flex flex-col justify-center">
-        <p>HOME | ABOUT | SERVICE | PORTFOLIO | PHOTO | CONTACT</p>
-
         <div className="mt-24 mb-11 mx-auto text-start">
           <p className="ml-32 text-headline1 font-bold">TEL</p>
           <p className="ml-32 text-headline2">+82 10 7712 2492</p>
@@ -39,12 +37,14 @@ function Footer() {
         </div>
         <div className="w-1/2 mt-11 ml-48 flex flex-row gap-8">
           <Image
+            className="cursor-pointer"
             src="/assets/images/instaLogo.svg"
             alt="인스타로고"
             width={60}
             height={60}
           />
           <Image
+            className="cursor-pointer"
             src="/assets/images/youtubeLogo.svg"
             alt="유튜브로고"
             width={60}

@@ -12,8 +12,8 @@ function Service() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="service0.png" />
         </div>
-        <div className="absolute bottom-[-16.6rem] right-0 left-0">
-          <NavBar tab="PHOTO" />
+        <div className="absolute bottom-[-16.2rem] right-0 left-0">
+          <NavBar tab="SERVICE" />
           <div className="mt-28 mb-56">
             <Title title="SERVICE" content="" />
           </div>

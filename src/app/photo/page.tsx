@@ -42,7 +42,7 @@ function Photo() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="photoBanner.png" />
         </div>
-        <div className="absolute bottom-[-16.6rem] right-0 left-0">
+        <div className="absolute bottom-[-16.2rem] right-0 left-0">
           <NavBar tab="PHOTO" />
           <div className="mt-28 mb-56">
             <Title title="PHOTO" content="" />
