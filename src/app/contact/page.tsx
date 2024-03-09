@@ -29,7 +29,7 @@ function Estimate() {
     }
   };
   return (
-    <div className="w-screen">
+    <div className="w-full">
       <div className="relative">
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />

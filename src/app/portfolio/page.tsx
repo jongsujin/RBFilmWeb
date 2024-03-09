@@ -69,7 +69,7 @@ function PortFolio() {
     return <div>로딩중</div>;
   }
   return (
-    <div className="w-screen">
+    <div className="w-full">
       <div className="relative">
         <div className="mt-20 mb-60">
           <Banner bannerImage="portfolioBanner.png" />

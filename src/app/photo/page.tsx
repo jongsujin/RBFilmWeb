@@ -37,7 +37,7 @@ function Photo() {
   console.log(data);
   console.log(data.DATA);
   return (
-    <div className="w-screen">
+    <div className="w-full">
       <div className="relative">
         <div className="mt-20 mb-60">
           <Banner bannerImage="photoBanner.png" />
@@ -100,7 +100,7 @@ function Photo() {
           <div className="relative w-full max-w-[80%] grid grid-cols-2 gap-32">
             {photoItem.photo_url?.map((url: string, index: number) => (
               // eslint-disable-next-line react/no-array-index-key
-              <div key={index} className="h-[28rem] relative">
+              <div key={index} className="relative h-[28rem] max-2xl:h-[24rem]">
                 <Image
                   src={url}
                   alt="포토 사진"
