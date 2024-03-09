@@ -41,7 +41,7 @@ function ABOUT() {
     return <div>로딩중..</div>;
   }
   return (
-    <div className="w-screen">
+    <div className="w-full">
       <ContactHeader />
       <MainFilm filmUrl={mainfilmData?.url} />
       <div className="relative">
@@ -55,7 +55,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="relative w-screen xl:h-[800px] 2xl:h-[989px]">
+      <div className="relative xl:h-[800px] 2xl:h-[989px]">
         <Image src="/assets/images/about1.png" alt="소개1" fill />
         <p className="absolute top-32  left-1/2">
           <span className="font-bold xl:text-[35px] 2xl:text-[45px]">
@@ -92,7 +92,7 @@ function ABOUT() {
               로 함께 성장하기를 바랍니다.
               <br />
               <p className="mt-14">좋은 인연 되었으면 좋겠습니다.</p>
-              <p className="mt-14 xl:text-headline3 mr-2 2xl:text-headline1 font-bold text-right">
+              <p className="mt-14 xl:text-headline3 mr-6 2xl:text-headline1 font-bold text-right">
                 DOP 최정훈 <br />
                 R.B.FILM 대표
               </p>
@@ -101,11 +101,11 @@ function ABOUT() {
         </p>
       </div>
       <div className="flex flex-row justify-between gap-16 mt-56 xl:ml-[90px] mr-[90px] 2xl:ml-[154px] mr-[154px]">
-        <div className="relative flex-1 h-[539px]">
+        <div className="relative flex-1 xl:h-[400px] 2xl:h-[539px]">
           <Image src="/assets/images/about3.png" alt="소개사진2" fill />
         </div>
         <div className="flex-1 flex flex-col">
-          <div className="flex flex-row justify-between xl:mb-[5rem] 2xl:mb-[4.3rem]">
+          <div className="flex flex-row justify-between xl:mb-[2.7rem] 2xl:mb-[4.3rem]">
             <p className="xl:text-headline2 2xl:text-[25px] font-bold">
               Camera
             </p>
@@ -113,7 +113,7 @@ function ABOUT() {
               FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1{" "}
             </p>
           </div>
-          <div className="flex flex-row justify-between xl:mb-[5rem] 2xl:mb-[4.3rem]">
+          <div className="flex flex-row justify-between xl:mb-[2.7rem] 2xl:mb-[4.3rem]">
             <p className="xl:text-headline2 2xl:text-[25px] font-bold">Lens</p>
             <p className="w-[80%] xl:text-[15px] leading-8 2xl:text-[22px] leading-10">
               <span>Sony 16-35mm GM / Sony 50mm GM / Sony 24-105 GM</span>
@@ -121,13 +121,13 @@ function ABOUT() {
               <span> Sony 70-200 GM2 / Sony 24-70 GM2 / Canon 28-70 RF</span>
             </p>
           </div>
-          <div className="flex flex-row justify-between xl:mb-[5rem] 2xl:mb-[4.3rem]">
+          <div className="flex flex-row justify-between xl:mb-[2.7rem] 2xl:mb-[4.3rem]">
             <p className="xl:text-headline2 2xl:text-[25px] font-bold">Light</p>
             <p className="w-[80%] xl:text-[15px] leading-8 2xl:text-[22px] leading-10">
               AMARAN 300 C *2
             </p>
           </div>
-          <div className="flex flex-row justify-between xl:mb-[5rem] 2xl:mb-[4.3rem]">
+          <div className="flex flex-row justify-between xl:mb-[2.7rem] 2xl:mb-[4.3rem]">
             <p className="xl:text-headline2 2xl:text-[25px] font-bold">
               Gimbal
             </p>
@@ -151,9 +151,9 @@ function ABOUT() {
       <div className="mt-[9.688rem] mb-32 text-center text-[45px]">
         <p>R.B. FILM 만의 핵심 강점 및 차별성</p>
       </div>
-      <div className="border mr-[154px] ml-[154px] mb-60 flex flex-col">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
         <div className="flex flex-row">
-          <div className="relative flex-1 border h-[529px]">
+          <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about2.png" alt="소개사진3" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
@@ -175,7 +175,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mr-[154px] ml-[154px] mb-60 flex flex-col">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold">
@@ -195,14 +195,14 @@ function ABOUT() {
               </p>
             </div>
           </div>
-          <div className="relative flex-1 border h-[529px]">
+          <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about4.png" alt="소개사진3" fill />
           </div>
         </div>
       </div>
-      <div className="border mr-[154px] ml-[154px] mb-60 flex flex-col">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
         <div className="flex flex-row">
-          <div className="relative flex-1 border h-[529px]">
+          <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about5.png" alt="소개사진3" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
@@ -225,7 +225,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mr-[154px] ml-[154px] flex flex-col">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold">
@@ -244,7 +244,7 @@ function ABOUT() {
               </p>
             </div>
           </div>
-          <div className="relative flex-1 border h-[529px]">
+          <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about6.png" alt="소개사진3" fill />
           </div>
         </div>
@@ -252,18 +252,18 @@ function ABOUT() {
       <div className="mt-80">
         <Title title="CLIENTS" content="고객사" />
       </div>
-      <div className=" w-[80%] mt-[10.5rem] grid grid-cols-6 mx-auto">
+      <div className="w-[80%] mt-[10.5rem] grid grid-cols-6 mx-auto">
         {clientData?.DATA?.map((client: ClientProps) => (
           <div key={client.id}>
             <ClientItem title={client.title} url={client.image_url} />
           </div>
         ))}
       </div>
-      <div className="mt-60 mx-auto">
+      <div className="mt-60">
         <Title title="BIOGRAPHY" content="연혁" />
       </div>
       <div className="mt-[5.5rem]  h-[1250px] mx-auto">
-        <div className="relative w-full h-full">
+        <div className="w-[90%] h-full mx-auto">
           <Image
             src="/assets/images/biography.svg"
             alt="연혁 사진"
