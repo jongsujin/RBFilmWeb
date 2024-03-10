@@ -36,6 +36,15 @@ const config: Config = {
         photo:
           "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 18px",
       },
+      screens: {
+        // mobile: { min: "640px", max: "767px" },
+        // // => @media (min-width: 640px) { ... }
+        // tablet: { min: "768px", max: "1023px" },
+        // laptop: { min: "1024px", max: "1440px" },
+        // // => @media (max-width: 1540px) { ... }
+        // desktop: { min: "1441px", max: "1800px" },
+        // // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],

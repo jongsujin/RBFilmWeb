@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="fixed w-full top-0 pl-[154px] pr-[154px] bg-white h-20 pt-5 flex flex-row justify-between z-10">
+    <header className="fixed w-screen top-0  bg-white h-20 pt-5 flex flex-row justify-between z-10 xl:pr-[90px] pl-[90px] 2xl:pr-[154px] pl-[154px]">
       <div className="flex flex-row gap-6">
         <p className="text-headline3 font-semibold pt-[6px]">R.B FILM</p>
         <button
