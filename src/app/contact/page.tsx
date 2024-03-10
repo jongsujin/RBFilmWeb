@@ -56,7 +56,11 @@ function Estimate() {
           </p>
           <p className="text-headline1">좋은 인연이 되었으면 합니다.</p>
           <div>
-            <form className="w-2/3 mt-24" ref={ref} onSubmit={onSubmitForm}>
+            <form
+              className="w-2/3 mt-24 max-2xl:w-full"
+              ref={ref}
+              onSubmit={onSubmitForm}
+            >
               <div>
                 <div className="flex flex-row gap-1">
                   <p className="text-headline1 font-bold">
@@ -169,7 +173,7 @@ function Estimate() {
             </form>
           </div>
         </div>
-        <div className="w-1/2 ml-20">
+        <div className="w-1/2 ml-20 max-2xl:flex max-2xl:flex-col max-2xl:justify-between">
           <Image
             className=""
             src="/assets/images/contact1.svg"
