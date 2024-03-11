@@ -155,15 +155,18 @@ function PortFolio() {
         <div className="w-[90%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto">
           {data &&
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
-              <div key={portfolioItem.id} className="border relative h-72">
+              <div
+                key={portfolioItem.id}
+                className="border relative  h-[24rem] max-2xl:h-[22rem]"
+              >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
                   <Image
                     src="/assets/images/playerBtn32.svg"
                     alt="재생버튼"
-                    width={48}
-                    height={48}
-                    className="absolute top-[40%] left-[45%]"
+                    width={64}
+                    height={64}
+                    className="absolute top-[50%] left-[50%]"
                   />
                 </Link>
               </div>

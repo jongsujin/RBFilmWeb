@@ -97,10 +97,10 @@ function Photo() {
           <p className="text-[25px] font-medium mb-8">
             {photoItem.photo_subtitle}
           </p>
-          <div className="relative w-full max-w-[80%] grid grid-cols-2 gap-32">
+          <div className="relative w-[90%] grid grid-cols-2 gap-32">
             {photoItem.photo_url?.map((url: string, index: number) => (
               // eslint-disable-next-line react/no-array-index-key
-              <div key={index} className="relative h-[28rem] max-2xl:h-[24rem]">
+              <div key={index} className="relative h-[30rem] max-2xl:h-[25rem]">
                 <Image
                   src={url}
                   alt="포토 사진"
