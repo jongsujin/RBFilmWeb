@@ -44,15 +44,15 @@ function PortfolioModal() {
         {data?.sub_title ? (
           <p className="mb-14 text-[30px] font-medium">{data?.sub_title}</p>
         ) : null}
-        <p className="text-headline1">{data?.first_content}</p>
-        <p className="text-headline1">{data?.second_content}</p>
-        <p className="text-headline1">{data?.third_content}</p>
-        <p className="mt-14 last:font-bold text-headline1">Part</p>
-        <p className="mb-14 text-headline1">{data?.part}</p>
+        <p className="text-headline2">{data?.first_content}</p>
+        <p className="text-headline2">{data?.second_content}</p>
+        <p className="text-headline2">{data?.third_content}</p>
+        <p className="mt-14 last:font-bold text-headline2">Part</p>
+        <p className="mb-14 text-headline2">{data?.part}</p>
         <div className="mb-14">
-          <p className="font-bold text-headline1">By</p>
-          <p className="text-headline1">{data?.first_by}</p>
-          <p className="text-headline1">{data?.second_by}</p>
+          <p className="font-bold text-headline2">By</p>
+          <p className="text-headline2">{data?.first_by}</p>
+          <p className="text-headline2">{data?.second_by}</p>
         </div>
       </div>
     </div>

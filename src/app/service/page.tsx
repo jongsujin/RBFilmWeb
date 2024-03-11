@@ -19,10 +19,10 @@ function Service() {
           </div>
         </div>
       </div>
-      <div className="mt-7  h-[4200px] flex flex-row justify-center">
+      <div className="mt-7  h-[4200px] flex flex-row justify-center gap-4">
         <div className="flex-1 mt-16 flex flex-col text-right items-end">
           <p className="font-bold text-[40px]">Process</p>
-          <p className="font-bold  text-[45px] mt-[11.8rem]">
+          <p className="font-bold  text-[45px] mt-[9.8rem]">
             <span>Step 01</span>
             <br />
             <span>구성</span>
@@ -36,10 +36,10 @@ function Service() {
             <br />
             <span>[필요시 온라인 미팅 대체]</span>
           </p>
-          <div className="relative w-[750px] h-[425px] mt-[25.7rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+          <div className="relative w-[750px] h-[425px] mt-[28rem] max-2xl:w-[600px] max-2xl:h-[350px]">
             <Image src="/assets/images/service2.png" alt="step02 사진" fill />
           </div>
-          <p className="font-bold text-[45px] mt-[16.2rem] max-2xl:mt-[20rem]">
+          <p className="font-bold text-[45px] mt-[13.2rem] max-2xl:mt-[20rem]">
             <span>Step 03</span>
             <br />
             <span>촬영</span>
@@ -47,10 +47,10 @@ function Service() {
           <p className="mt-14 mb-[5.5rem] text-headline1">
             <span>현장 촬영을 진행합니다.</span>{" "}
           </p>
-          <div className="relative mb-[16.8rem] w-[750px] h-[425px] mt-[25rem] max-2xl:w-[600px] max-2xl:h-[350px] max-2xl:mt-[24.5rem]">
+          <div className="relative mb-[13.7rem] w-[750px] h-[425px] mt-[26.5rem] max-2xl:w-[600px] max-2xl:h-[350px] max-2xl:mt-[24.5rem]">
             <Image src="/assets/images/service4.png" alt="step04 사진" fill />
           </div>
-          <div className="mt-5 max-2xl:mt-[4.8rem]">
+          <div className="mt-4 max-2xl:mt-[4.8rem]">
             <p className=" text-[45px] font-bold">
               <span>Step 05</span>
               <br />
@@ -64,9 +64,9 @@ function Service() {
               <span>(모션 이펙트 / 디테일한 색 보정 / 음성 믹스)</span>
             </p>
           </div>
-          <div className="relative w-[750px] h-[425px] mt-[28.5rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+          {/* <div className="relative w-[750px] h-[425px] mt-[28.5rem] max-2xl:w-[600px] max-2xl:h-[350px]">
             <Image src="/assets/images/service5.png" alt="step0 사진" fill />
-          </div>
+          </div> */}
         </div>
         <div className="relative w-10 h-full">
           <Image src="/assets/images/dotLine.png" alt="중간 선" fill priority />
@@ -76,7 +76,7 @@ function Service() {
           <div className="relative w-[750px] h-[420px] mt-[13.5rem] max-2xl:w-[600px] max-2xl:h-[350px]">
             <Image src="/assets/images/service1.png" alt="step01 사진" fill />
           </div>
-          <div className="mt-[14.2rem] text-left max-2xl:mt-[18.7rem]">
+          <div className="mt-[12.2rem] text-left max-2xl:mt-[16.7rem]">
             <p className="  text-[45px] font-bold">
               <span>Step 02</span> <br />
               <span>기획</span>
@@ -84,31 +84,34 @@ function Service() {
             <p className="text-headline1 mt-14">
               <span>
                 레퍼런스와 전달 받은 자료를 바탕으로 스토리 보드 및 촬영일정,
-              </span>{" "}
-              <br />
-              <span>스텝을 구성합니다.</span>
+                스텝을 구성합니다.
+              </span>
               <br />
               <span>로케이션 섭외 및 드론 촬영의 경우 허가를 진행합니다.</span>
               <br />
               [약 1주일 소요]
             </p>
           </div>
-          <div className="relative w-[750px] h-[420px] mt-[25rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+          <div className="relative w-[750px] h-[420px] mt-[29rem] max-2xl:w-[600px] max-2xl:h-[350px]">
             <Image src="/assets/images/service3.png" alt="step01 사진" fill />
           </div>
-          <div className="text-left  mt-[14.5rem] max-2xl:mt-[18.8rem]">
+          <div className="text-left  mt-[12.5rem] max-2xl:mt-[20.8rem]">
             <p className=" text-[45px] font-bold">
               <span>Step 04</span> <br />
               <span>1차 편집</span>
             </p>
             <p className=" text-headline1 mt-14">
-              <span>BGM에 대한 협의 후 기본적인 컷 구성 및 색보정,</span> <br />
-              <span>기본 자막 구성을 통해 1차 편집본을 전달해 드립니다.</span>
+              <span>
+                BGM에 대한 협의 후 기본적인 컷 구성 및 색보정, 기본 자막 구성을
+                통해{" "}
+              </span>{" "}
+              <br />
+              <span>1차 편집본을 전달해 드립니다.</span>
             </p>
-            <div className="relative w-[750px] h-[425px]  mt-[31rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+            <div className="relative w-[750px] h-[425px]  mt-[32.8rem] max-2xl:w-[600px] max-2xl:h-[350px]">
               <Image src="/assets/images/service5.png" alt="step01 사진" fill />
             </div>
-            <p className="text-[45px] font-bold text-left mt-[14.4rem] max-2xl:mt-[19.2rem]">
+            <p className="text-[45px] font-bold text-left mt-[14.4rem] 2xl:mt-[12.8rem]">
               <span>Step 06</span> <br />
               <span>완료</span>
             </p>
@@ -118,7 +121,9 @@ function Service() {
       <div className="mt-64">
         <Title title="OUR TEAM" content="" />
       </div>
-      <Footer />
+      <div className="2xl: mt-20 2xl:mr-[360px] 2xl:ml-[360px]">
+        <Footer />
+      </div>
     </div>
   );
 }

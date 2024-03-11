@@ -9,7 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
-import SliderItem from "./_component/SliderItem";
+// import SliderItem from "./_component/SliderItem";
 import fetchPortfolioTheme from "@/api/fetchPortfolioTheme";
 import portfolioSelectedTheme from "@/recoil/atom";
 
@@ -86,7 +86,6 @@ function PortFolio() {
         <div className="text-center text-[25px] pt-2 font-pt">
           Make Your Film Special
         </div>
-        <SliderItem />
       </div>
       <div className="text-center mb-[21rem]">
         <p className="text-[30px] font-bold">
@@ -152,21 +151,21 @@ function PortFolio() {
         </button>
       </div>
       {isItem && isItem ? null : (
-        <div className="w-[90%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto">
+        <div className="w-[65%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto">
           {data &&
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
               <div
                 key={portfolioItem.id}
-                className="border relative  h-[24rem] max-2xl:h-[22rem]"
+                className="border relative h-[24rem] 2xl:h-[16.32rem]"
               >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
                   <Image
                     src="/assets/images/playerBtn32.svg"
                     alt="재생버튼"
-                    width={64}
-                    height={64}
-                    className="absolute top-[50%] left-[50%]"
+                    width={48}
+                    height={48}
+                    className="absolute top-[45%] left-[45%]"
                   />
                 </Link>
               </div>
