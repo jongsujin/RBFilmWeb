@@ -41,7 +41,7 @@ function Estimate() {
           </div>
         </div>
       </div>
-      <div className="ml-40 mr-40 flex flex-row justify-between">
+      <div className="w-[70%] flex flex-row justify-between mx-auto">
         <div className="w-1/2">
           <p className="text-[30px] font-bold mb-14">
             궁금하신 점이 있으신가요?
@@ -74,7 +74,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2"
                   type="text"
                 />
               </div>
@@ -89,7 +89,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2"
                   type="email"
                   name="email"
                   required
@@ -106,7 +106,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2"
                   type="text"
                   name="phoneNumber"
                   required
@@ -126,7 +126,7 @@ function Estimate() {
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
                 </p>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2"
                   type="text"
                   name="money"
                   required
@@ -139,7 +139,7 @@ function Estimate() {
                   계신 경우 상단 메일로 보내주세요.
                 </p>
                 <input
-                  className="w-full h-11 border mb-7 border-white bg-black pl-2"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2"
                   type="text"
                   name="referrence"
                 />
@@ -199,7 +199,7 @@ function Estimate() {
           />
         </div>
       </div>
-      <div className="mt-[45rem]">
+      <div className="mt-[45rem] 2xl:mr-[350px] 2xl:ml-[350px]">
         <Footer />
       </div>
     </div>

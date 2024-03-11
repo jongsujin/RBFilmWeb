@@ -50,7 +50,7 @@ function ABOUT() {
         </div>
         <div className="absolute bottom-[-20rem] right-0 left-0">
           <NavBar tab="ABOUT" />
-          <div className="mt-28 mb-56">
+          <div className="mt-20 mb-56">
             <Title title="ABOUT" content="소개" />
           </div>
         </div>
@@ -100,7 +100,7 @@ function ABOUT() {
           </p>
         </p>
       </div>
-      <div className="flex flex-row justify-between gap-16 mt-56 xl:ml-[90px] mr-[90px] 2xl:ml-[154px] mr-[154px]">
+      <div className="flex flex-row justify-between gap-16 mt-56 xl:ml-[90px] mr-[90px] 2xl:ml-[360px] mr-[360px]">
         <div className="relative flex-1 xl:h-[400px] 2xl:h-[539px]">
           <Image src="/assets/images/about3.png" alt="소개사진2" fill />
         </div>
@@ -143,7 +143,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row mt-64 ml-[154px] mr-[154px]">
+      <div className="flex flex-row mt-64 ml-[360px] mr-[360px]">
         <div className=" w-3 h-3 rounded-full bg-white mt-7" />
         <div className="h-0.5  w-full border border-white mt-8 mx-auto" />
         <div className=" w-3 h-3 rounded-full bg-white mt-7" />
@@ -151,7 +151,7 @@ function ABOUT() {
       <div className="mt-[9.688rem] mb-32 text-center text-[45px]">
         <p>R.B. FILM 만의 핵심 강점 및 차별성</p>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] 2xl:ml-[360px]">
         <div className="flex flex-row">
           <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about2.png" alt="소개사진3" fill />
@@ -175,7 +175,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] ml-[360px] ">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold">
@@ -200,7 +200,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] ml-[360px] ">
         <div className="flex flex-row">
           <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about5.png" alt="소개사진3" fill />
@@ -225,7 +225,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[154px] ml-[154px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] ml-[360px] ">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold">
@@ -252,7 +252,7 @@ function ABOUT() {
       <div className="mt-80">
         <Title title="CLIENTS" content="고객사" />
       </div>
-      <div className="w-[80%] mt-[10.5rem] grid grid-cols-6 mx-auto">
+      <div className="w-[70%] mt-[10.5rem] grid grid-cols-6 mx-auto">
         {clientData?.DATA?.map((client: ClientProps) => (
           <div key={client.id}>
             <ClientItem title={client.title} url={client.image_url} />
@@ -262,8 +262,8 @@ function ABOUT() {
       <div className="mt-60">
         <Title title="BIOGRAPHY" content="연혁" />
       </div>
-      <div className="mt-[5.5rem]  h-[1250px] mx-auto">
-        <div className="w-[90%] h-full mx-auto">
+      <div className="mt-[5.5rem]  h-[1360px] mx-auto">
+        <div className="w-[70%] h-full mx-auto">
           <Image
             src="/assets/images/biography.svg"
             alt="연혁 사진"

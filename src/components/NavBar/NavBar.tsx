@@ -7,7 +7,7 @@ interface NavBarProps {
 function NavBar({ tab }: NavBarProps) {
   return (
     <div className="mx-auto  w-1/2">
-      <ul className="flex flex-row list-none gap-5 text-headline3 text-white font-semibold justify-center ">
+      <ul className="flex flex-row list-none gap-8 text-headline3 text-white font-semibold justify-center ">
         <Link href="/about">
           <button
             type="button"
