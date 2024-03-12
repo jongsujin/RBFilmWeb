@@ -100,7 +100,7 @@ function ABOUT() {
           </p>
         </p>
       </div>
-      <div className="flex flex-row justify-between gap-16 mt-56 xl:ml-[90px] mr-[90px] 2xl:ml-[360px] mr-[360px]">
+      <div className="flex flex-row justify-between gap-16 mt-56 xl:ml-[90px] xl:mr-[90px] 2xl:ml-[360px] 2xl:mr-[360px]">
         <div className="relative flex-1 xl:h-[400px] 2xl:h-[539px]">
           <Image src="/assets/images/about3.png" alt="소개사진2" fill />
         </div>
@@ -109,7 +109,7 @@ function ABOUT() {
             <p className="xl:text-headline2 2xl:text-[25px] font-bold">
               Camera
             </p>
-            <p className="w-[80%] xl:text-[15px] leading-8 2xl:text-[22px] leading-10">
+            <p className="w-[80%] xl:text-[15px] xl:leading-8 2xl:text-[22px] 2xl:leading-10">
               FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1{" "}
             </p>
           </div>
@@ -143,7 +143,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row mt-64 ml-[360px] mr-[360px]">
+      <div className="flex flex-row mt-64 2xl:ml-[360px] 2xl:mr-[360px]">
         <div className=" w-3 h-3 rounded-full bg-white mt-7" />
         <div className="h-0.5  w-full border border-white mt-8 mx-auto" />
         <div className=" w-3 h-3 rounded-full bg-white mt-7" />
@@ -175,7 +175,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] ml-[360px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] xl:ml-[90px] 2xl:mr-[360px] 2xl:ml-[360px] ">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold">
@@ -200,7 +200,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] ml-[360px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] xl:ml-[90px] 2xl:mr-[360px] 2xl:ml-[360px] ">
         <div className="flex flex-row">
           <div className="relative flex-1 border xl:h-[440px] 2xl:h-[529px]">
             <Image src="/assets/images/about5.png" alt="소개사진3" fill />
@@ -225,7 +225,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="border mb-60 flex flex-col xl:mr-[90px] ml-[90px] 2xl:mr-[360px] ml-[360px] ">
+      <div className="border mb-60 flex flex-col xl:mr-[90px] xl:ml-[90px] 2xl:mr-[360px] 2xl:ml-[360px] ">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold">
