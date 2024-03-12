@@ -36,7 +36,7 @@ function Service() {
             <br />
             <span>[필요시 온라인 미팅 대체]</span>
           </p>
-          <div className="relative w-[750px] h-[425px] mt-[28rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+          <div className="relative w-[750px] h-[425px] mt-[28rem]">
             <Image src="/assets/images/service2.png" alt="step02 사진" fill />
           </div>
           <p className="font-bold text-[45px] mt-[13.2rem] max-2xl:mt-[20rem]">
@@ -47,7 +47,7 @@ function Service() {
           <p className="mt-14 mb-[5.5rem] text-headline1">
             <span>현장 촬영을 진행합니다.</span>{" "}
           </p>
-          <div className="relative mb-[13.7rem] w-[750px] h-[425px] mt-[26.5rem] max-2xl:w-[600px] max-2xl:h-[350px] max-2xl:mt-[24.5rem]">
+          <div className="relative mb-[13.7rem] w-[750px] h-[425px] mt-[26.5rem]">
             <Image src="/assets/images/service4.png" alt="step04 사진" fill />
           </div>
           <div className="mt-4 max-2xl:mt-[4.8rem]">
@@ -73,7 +73,7 @@ function Service() {
         </div>
         <div className="flex-1 mt-16 flex flex-col">
           <p className="text-[40px] font-bold">제작 과정</p>
-          <div className="relative w-[750px] h-[420px] mt-[13.5rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+          <div className="relative w-[750px] h-[420px] mt-[13.5rem]">
             <Image src="/assets/images/service1.png" alt="step01 사진" fill />
           </div>
           <div className="mt-[12.2rem] text-left max-2xl:mt-[16.7rem]">
@@ -92,7 +92,7 @@ function Service() {
               [약 1주일 소요]
             </p>
           </div>
-          <div className="relative w-[750px] h-[420px] mt-[29rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+          <div className="relative w-[750px] h-[420px] mt-[29rem]">
             <Image src="/assets/images/service3.png" alt="step01 사진" fill />
           </div>
           <div className="text-left  mt-[12.5rem] max-2xl:mt-[20.8rem]">
@@ -108,7 +108,7 @@ function Service() {
               <br />
               <span>1차 편집본을 전달해 드립니다.</span>
             </p>
-            <div className="relative w-[750px] h-[425px]  mt-[32.8rem] max-2xl:w-[600px] max-2xl:h-[350px]">
+            <div className="relative w-[750px] h-[425px]  mt-[32.8rem]">
               <Image src="/assets/images/service5.png" alt="step01 사진" fill />
             </div>
             <p className="text-[45px] font-bold text-left mt-[14.4rem] 2xl:mt-[12.8rem]">
