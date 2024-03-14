@@ -118,7 +118,7 @@ function Service() {
       <div className="mt-64">
         <Title title="OUR TEAM" content="" />
       </div>
-      <div className="2xl: mt-20 2xl:mr-[360px] 2xl:ml-[360px]">
+      <div className="w-[70%] mx-auto">
         <Footer />
       </div>
     </div>

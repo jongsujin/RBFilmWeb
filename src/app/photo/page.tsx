@@ -116,7 +116,7 @@ function Photo() {
           </div>
         </div>
       ))}
-      <div className="2xl:mr-[350px] 2xl:ml-[350px]">
+      <div className="w-[70%] mx-auto">
         <Footer />
       </div>
     </div>
