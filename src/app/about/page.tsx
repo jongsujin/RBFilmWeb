@@ -55,7 +55,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
-      <div className="relative xl:h-[800px] xxl:h-[989px]">
+      <div className="relative h-[1080px] max-[1440px]:h-[810px]">
         <Image src="/assets/images/about1.png" alt="소개1" fill />
         <p className="absolute top-32  left-1/2">
           <span className="font-bold xl:text-[35px] xxl:text-[45px]">
@@ -101,39 +101,49 @@ function ABOUT() {
         </p>
       </div>
       <div className="flex flex-row justify-between gap-16 mt-56 mx-auto w-[70%]">
-        <div className="relative flex-1 xl:h-[400px] xxl:h-[33.688rem]">
+        <div className="relative flex-1 h-[360px] max-[1440px]:h-[265px]">
           <Image src="/assets/images/about3.png" alt="소개사진2" fill />
         </div>
-        <div className="flex-1 flex flex-col">
-          <div className="flex flex-row justify-between xl:mb-[2.7rem] xxl:mb-[4.3rem]">
-            <p className="xl:text-[25px] xxl:text-[25px] font-bold">Camera</p>
-            <p className="w-[80%] text-[16px] leading-10 xxl:text-[22px] xxl:leading-10">
+        <div className="flex-1 flex flex-col gap-8 max-[1440px]:gap-4">
+          <div className="flex flex-row justify-between">
+            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+              Camera
+            </p>
+            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
               FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1{" "}
             </p>
           </div>
-          <div className="flex flex-row justify-between xl:mb-[2.7rem] xxl:mb-[4.3rem]">
-            <p className="xl:text-[25px] xxl:text-[25px] font-bold">Lens</p>
-            <p className="w-[80%] text-[16px] leading-10 xxl:text-[22px] xxl:leading-10">
+          <div className="flex flex-row justify-between">
+            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+              Lens
+            </p>
+            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
               <span>Sony 16-35mm GM / Sony 50mm GM / Sony 24-105 GM</span>
               <br />
               <span> Sony 70-200 GM2 / Sony 24-70 GM2 / Canon 28-70 RF</span>
             </p>
           </div>
-          <div className="flex flex-row justify-between xl:mb-[2.7rem] xxl:mb-[4.3rem]">
-            <p className="xl:text-[25px] xxl:text-[25px] font-bold">Light</p>
-            <p className="w-[80%] text-[16px] leading-9 xxl:text-[22px] xxl:leading-10">
+          <div className="flex flex-row justify-between">
+            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+              Light
+            </p>
+            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
               AMARAN 300 C *2
             </p>
           </div>
-          <div className="flex flex-row justify-between xl:mb-[2.7rem] xxl:mb-[4.3rem]">
-            <p className="xl:text-[25px] xxl:text-[25px] font-bold">Gimbal</p>
-            <p className="w-[80%] text-[16px] leading-9 xxl:text-[22px] xxl:leading-10">
+          <div className="flex flex-row justify-between">
+            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+              Gimbal
+            </p>
+            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
               Ronin RS2 pro / Tilta Ring Grip / Crane 3S
             </p>
           </div>
           <div className="flex flex-row justify-between gap-13">
-            <p className="xl:text-[25px] xxl:text-[25px] font-bold">Drone</p>
-            <p className="w-[80%] text-[16px] leading-10 xxl:text-[22px] xxl:leading-10">
+            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+              Drone
+            </p>
+            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
               DJI MAVC 3 Classic{" "}
             </p>
           </div>
@@ -149,20 +159,20 @@ function ABOUT() {
       </div>
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
-          <div className="relative flex-1 border xl:h-[400px] xxl:h-[529px]">
+          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
             <Image src="/assets/images/about2.png" alt="소개사진3" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
               01 체계적이지만 유연함
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16">
-              <p className="text-headline1">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+              <p>
                 <span>넓은 스펙트럼을 보유한 젊은 인력풀을 구성해</span>
                 <br />
                 <span>현장에 따른 유연한 대처를 가능하게 합니다.</span>
               </p>
-              <p className="text-headline1">
+              <p>
                 <span>대표가 모든 프로젝트에 총괄로 참여해</span>
                 <br />
                 <span>시작부터 끝까지 책임집니다.</span>
@@ -174,11 +184,11 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
               02 합리적인 견적
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16">
-              <p className="text-headline1">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+              <p>
                 <span>
                   내부적으로 하이앤드 카메라 [Red Komodo / FX9 / Ronin4D]를
                 </span>
@@ -191,22 +201,22 @@ function ABOUT() {
               </p>
             </div>
           </div>
-          <div className="relative flex-1 border xl:h-[400px] xxl:h-[529px]">
+          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
             <Image src="/assets/images/about4.png" alt="소개사진3" fill />
           </div>
         </div>
       </div>
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
-          <div className="relative flex-1 border xl:h-[400px] xxl:h-[529px]">
+          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
             <Image src="/assets/images/about5.png" alt="소개사진3" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
               03 다양한 전문가와의 협력
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16">
-              <p className="text-headline1">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+              <p>
                 <span>
                   동시 오디오 감독, 드론 촬영 감독, 작가, 자막 등 종편 편집자,
                 </span>
@@ -224,23 +234,23 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
               04 적극적인 제안
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16">
-              <p className="text-headline1">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+              <p>
                 <span>레퍼런스 및 클라이언트의 니즈 반영은 물론,</span>
                 <br />
                 <span>디벨롭을 위한 더 나은 방향을 제안해 드립니다.</span>
               </p>
-              <p className="text-headline1">
+              <p>
                 <span>제작 내 모든 프로세스에서 충분한 소통을 통해</span>
                 <br />
                 <span>좋은 작품을 위해 함께 고민합니다.</span>
               </p>
             </div>
           </div>
-          <div className="relative flex-1 border xl:h-[400px] xxl:h-[529px]">
+          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
             <Image src="/assets/images/about6.png" alt="소개사진3" fill />
           </div>
         </div>
