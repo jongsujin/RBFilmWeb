@@ -199,7 +199,7 @@ function Estimate() {
           />
         </div>
       </div>
-      <div className="mt-[45rem] 2xl:mr-[350px] 2xl:ml-[350px]">
+      <div className="mt-[45rem] w-[70%] mx-auto">
         <Footer />
       </div>
     </div>
