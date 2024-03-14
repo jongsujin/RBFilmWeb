@@ -99,8 +99,11 @@ function Photo() {
           </p>
           <div className="relative w-[70%] grid grid-cols-2 gap-32">
             {photoItem.photo_url?.map((url: string, index: number) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <div key={index} className="relative h-[32rem] max-2xl:h-[25rem]">
+              <div
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                className="relative h-[32rem] max-[1440px]:h-[245px]"
+              >
                 <Image
                   src={url}
                   alt="포토 사진"
@@ -113,7 +116,7 @@ function Photo() {
           </div>
         </div>
       ))}
-      <div className="2xl:mr-[350px] 2xl:ml-[350px]">
+      <div className="w-[70%] mx-auto">
         <Footer />
       </div>
     </div>
