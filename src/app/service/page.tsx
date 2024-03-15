@@ -108,7 +108,7 @@ function Service() {
             <div className="relative w-[750px] h-[420px]  mt-[32.8rem]  max-[1440px]:w-[470px] max-[1440px]:h-[265px] max-[1440px]:mt-[34.5rem]">
               <Image src="/assets/images/service5.png" alt="step01 사진" fill />
             </div>
-            <p className="text-[45px] font-bold text-left mt-[14.4rem] max-[1440px]:text-[35px] max-[1440px]:mt-[24rem]">
+            <p className="text-[45px] font-bold text-left mt-[13.4rem] max-[1440px]:text-[35px] max-[1440px]:mt-[24rem]">
               <span>Step 06</span> <br />
               <span>완료</span>
             </p>
