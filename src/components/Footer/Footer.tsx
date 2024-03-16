@@ -37,20 +37,32 @@ function Footer() {
           </p>
         </div>
         <div className="w-1/2 mt-11 ml-48 flex flex-row gap-8">
-          <Image
-            className="cursor-pointer"
-            src="/assets/images/instaLogo.svg"
-            alt="인스타로고"
-            width={60}
-            height={60}
-          />
-          <Image
-            className="cursor-pointer"
-            src="/assets/images/youtubeLogo.svg"
-            alt="유튜브로고"
-            width={60}
-            height={60}
-          />
+          <a
+            href="https://www.instagram.com/rbfilm_official/?igsh=ZHEwbXFuM2p4cWlj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="cursor-pointer"
+              src="/assets/images/instaLogo.svg"
+              alt="인스타로고"
+              width={60}
+              height={60}
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@RBFILM-ko6nv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="cursor-pointer"
+              src="/assets/images/youtubeLogo.svg"
+              alt="유튜브로고"
+              width={60}
+              height={60}
+            />
+          </a>
         </div>
       </div>
     </div>

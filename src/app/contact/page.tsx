@@ -34,7 +34,7 @@ function Estimate() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
         </div>
-        <div className="absolute bottom-[-20rem] right-0 left-0">
+        <div className="absolute bottom-[-20rem] max-xl:bottom-[-19rem] right-0 left-0">
           <NavBar tab="CONTACT" />
           <div className="mt-28 mb-56">
             <Title title="CONTACT" content="견적문의" />
@@ -43,27 +43,29 @@ function Estimate() {
       </div>
       <div className="w-[70%] flex flex-row justify-between mx-auto">
         <div className="w-1/2">
-          <p className="text-[30px] font-bold mb-14">
+          <p className="text-[30px] font-bold mb-14 max-xl:text-[25px]">
             궁금하신 점이 있으신가요?
           </p>
-          <p className="mb-7 text-headline1">
+          <p className="mb-7 text-headline1 max-xl:text-headline3">
             R.B.FILM은 어떤 종류의 프로젝트라도
             <br />
             처음부터 끝까지 내 영상을 제작한다는 마인드로 함께합니다.
           </p>
-          <p className="text-headline1">
+          <p className="text-headline1 max-xl:text-headline3">
             한 번의 비즈니스가 아닌 지속적인 파트너로 함께 성장하기를 바랍니다.
           </p>
-          <p className="text-headline1">좋은 인연이 되었으면 합니다.</p>
+          <p className="text-headline1 max-xl:text-headline3">
+            좋은 인연이 되었으면 합니다.
+          </p>
           <div>
             <form
               className="w-2/3 mt-24 max-2xl:w-full"
               ref={ref}
               onSubmit={onSubmitForm}
             >
-              <div>
+              <div className="">
                 <div className="flex flex-row gap-1">
-                  <p className="text-headline1 font-bold">
+                  <p className="text-headline1 font-bold max-xl:text-headline3">
                     업체(단체명) or 성함
                   </p>
                   <Image
@@ -80,7 +82,9 @@ function Estimate() {
               </div>
               <div>
                 <div className="flex flex-row gap-1">
-                  <p className="text-headline1 font-bold">이메일</p>
+                  <p className="text-headline1 font-bold max-xl:text-headline3">
+                    이메일
+                  </p>
                   <Image
                     src="/assets/images/essential.svg"
                     alt="필수사항"
@@ -97,7 +101,9 @@ function Estimate() {
               </div>
               <div>
                 <div className="flex flex-row gap-1">
-                  <p className="text-headline1 font-bold">연락처</p>
+                  <p className="text-headline1 font-bold max-xl:text-headline3">
+                    연락처
+                  </p>
                   <Image
                     src="/assets/images/essential.svg"
                     alt="필수사항"
@@ -114,7 +120,9 @@ function Estimate() {
               </div>
               <div>
                 <div className="flex flex-row gap-1">
-                  <p className="text-headline1 font-bold">제작 예산</p>
+                  <p className="text-headline1 font-bold max-xl:text-headline3">
+                    제작 예산
+                  </p>
                   <Image
                     src="/assets/images/essential.svg"
                     alt="필수사항"
@@ -122,7 +130,7 @@ function Estimate() {
                     height={29}
                   />
                 </div>
-                <p className="text-gray font-medium text-[15px]">
+                <p className="text-gray font-medium text-[15px] max-xl:text-[12px]">
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
                 </p>
                 <input
@@ -133,8 +141,10 @@ function Estimate() {
                 />
               </div>
               <div>
-                <p className="text-headline1 font-bold">레퍼런스 링크</p>
-                <p className="text-gray font-medium text-[15px]">
+                <p className="text-headline1 font-bold max-xl:text-headline3">
+                  레퍼런스 링크
+                </p>
+                <p className="text-gray font-medium text-[15px] max-xl:text-[12px]">
                   참고할 수 있는 영상 링크 or 타이틀을 알려주세요. 파일로 가지고
                   계신 경우 상단 메일로 보내주세요.
                 </p>
@@ -146,7 +156,9 @@ function Estimate() {
               </div>
               <div>
                 <div className="flex flex-row gap-1">
-                  <p className="text-headline1 font-bold">문의 사항</p>
+                  <p className="text-headline1 font-bold max-xl:text-headline3">
+                    문의 사항
+                  </p>
                   <Image
                     src="/assets/images/essential.svg"
                     alt="필수사항"
@@ -199,7 +211,7 @@ function Estimate() {
           />
         </div>
       </div>
-      <div className="mt-[45rem] w-[70%] mx-auto">
+      <div className="mt-[45rem] w-[80%] mx-auto">
         <Footer />
       </div>
     </div>
