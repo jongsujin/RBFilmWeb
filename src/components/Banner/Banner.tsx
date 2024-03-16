@@ -6,8 +6,14 @@ interface BannerProps {
 }
 function Banner({ bannerImage }: BannerProps) {
   return (
-    <div className="relative w-full h-[900px] mx-auto">
-      <Image src={`/assets/images/${bannerImage}`} fill alt="배너이미지" />
+    <div className="relative w-full  mx-auto">
+      <Image
+        src={`/assets/images/${bannerImage}`}
+        layout="responsive"
+        width={1200}
+        height={800}
+        alt="배너이미지"
+      />
     </div>
   );
 }

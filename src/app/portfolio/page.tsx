@@ -74,7 +74,7 @@ function PortFolio() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="portfolioBanner.png" />
         </div>
-        <div className="absolute bottom-[-20rem] right-0 left-0">
+        <div className="absolute bottom-[-20rem] max-xl:bottom-[-19rem] right-0 left-0 max-2xl:bottom-[-19.5rem]">
           <NavBar tab="PORTFOLIO" />
           <div className="mt-28 mb-56">
             <Title title="PORTFOLIO" content="포트폴리오" />
@@ -102,49 +102,49 @@ function PortFolio() {
       <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10">
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Interview", e)}
         >
           Interview
         </button>
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[16px]"
           onClick={(e) => handleThemeClick("Event Sketch", e)}
         >
           Event Sketch
         </button>
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("After Movie", e)}
         >
           After Movie
         </button>
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Youtube", e)}
         >
           Youtube
         </button>
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Viral", e)}
         >
           Brand Film / Viral
         </button>
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Performance", e)}
         >
           Performance
         </button>
         <button
           type="button"
-          className="cursor-pointer"
+          className="cursor-pointer max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("ETC", e)}
         >
           ETC
@@ -156,7 +156,7 @@ function PortFolio() {
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
               <div
                 key={portfolioItem.id}
-                className="border relative h-[24rem] max-[1440px]:h-[176px]"
+                className="border relative w-full h-[15rem] max-xl:h-[124px] max-2xl:h-[176px]"
               >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
@@ -165,7 +165,7 @@ function PortFolio() {
                     alt="재생버튼"
                     width={32}
                     height={32}
-                    className="absolute top-[45%] left-[45%]"
+                    className="absolute top-[45%] left-[45%] max-xl:w-5 max-xl:h-5 2xl:w-12 2xl:h-12"
                   />
                 </Link>
               </div>

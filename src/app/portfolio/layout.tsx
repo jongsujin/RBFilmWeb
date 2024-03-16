@@ -18,7 +18,7 @@ export default function PortFolioLayout({
     <>
       {children}
       {modal}
-      <div className="mt-56 w-[70%] mx-auto">
+      <div className="mt-56 w-[80%] mx-auto max-xl:w-[80%] max-2xl:w-[80%]">
         <Footer />
       </div>
     </>

@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { useQueries } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
@@ -15,6 +18,13 @@ import { ClientProps } from "@/types/clientItemType";
 import ClientItem from "./_component/ClientItem";
 
 function ABOUT() {
+  const svgRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSVG = () => {
+    if (svgRef.current) {
+      svgRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const results = useQueries({
     queries: [
       {
@@ -48,102 +58,63 @@ function ABOUT() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="about0.png" />
         </div>
-        <div className="absolute bottom-[-20rem] right-0 left-0">
+        <div className="absolute bottom-[-20rem] max-xl:bottom-[-19rem] max-2xl:bottom-[-19.5rem] right-0 left-0">
           <NavBar tab="ABOUT" />
-          <div className="mt-20 mb-56">
+          <div className="mt-20 mb-56" onClick={scrollToSVG}>
             <Title title="ABOUT" content="소개" />
           </div>
         </div>
       </div>
-      <div className="relative h-[1080px] max-[1440px]:h-[810px]">
-        <Image src="/assets/images/about1.png" alt="소개1" fill />
-        <p className="absolute top-32  left-1/2">
-          <span className="font-bold xl:text-[35px] xxl:text-[45px]">
-            {" "}
-            &quot;남의 것&quot;{" "}
-          </span>
-          <span className="font-bold xl:text-[25px] xxl:text-[35px]">
-            {" "}
-            이라는 생각이 들 때{" "}
-          </span>{" "}
-          <br />
-          <span className="font-bold xl:text-[35px] xxl:text-[45px]">
-            영상은 방향성을 잃어버립니다.
-          </span>
-          <br />
-          <p className="xl:text-headline3 xxl:text-headline1 font-medium mt-9">
-            R.B.FILM은 어떤 종류의 프로젝트라도 처음 부터 끝까지 내 영상을
-            제작한다는 마인드로 함께합니다.
-          </p>
-          <br />
-          <p className="xl:text-headline1 xxl:text-[28px] font-bold mt-12">
-            클라이언트가 보고 있는 &quot;일상&quot;에
-            <br />
-            R.B.FILM의 &quot;새로운 시선&quot;을 더해 더 나은 방향을 고민하고
-            있습니다.
-            <p className="mt-16 xl:text-headline3 xxl:text-headline1 font-medium">
-              트랜디한 감성, 역동적인 무빙, 시네마틱한 색감 구현 등 <br />{" "}
-              R.B.FILM만의 색깔과 각 분야 전문 인력들의 경험이 결합되어 최고의
-              결과물을 약속드립니다.
-              <br />한 번의 비즈니스가 아닌{" "}
-              <span className="xl:text-headline1 xxl:text-[30px] font-bold">
-                지속적인 파트너
-              </span>{" "}
-              로 함께 성장하기를 바랍니다.
-              <br />
-              <p className="mt-14">좋은 인연 되었으면 좋겠습니다.</p>
-              <p className="mt-14 xl:text-headline3 mr-6 xxl:text-headline1 font-bold text-right">
-                DOP 최정훈 <br />
-                R.B.FILM 대표
-              </p>
-            </p>
-          </p>
-        </p>
+      <div
+        ref={svgRef}
+        className="relative w-full max-ml:h-[210px] max-2xl:h-[853px] 2xl:h-[1024px]"
+      >
+        <Image src="/assets/images/about0.svg" alt="소개1" fill />
       </div>
-      <div className="flex flex-row justify-between gap-16 mt-56 mx-auto w-[70%]">
-        <div className="relative flex-1 h-[360px] max-[1440px]:h-[265px]">
+      <div className="flex flex-row justify-between gap-16 mt-56  mx-auto w-[70%] max-[767px]:w-[90%]">
+        <div className="flex-1 relative h-[426px] max-xl:h-[273px] max-2xl:h-[314px]">
           <Image src="/assets/images/about3.png" alt="소개사진2" fill />
         </div>
-        <div className="flex-1 flex flex-col gap-8 max-[1440px]:gap-4">
+        <div className="flex-1 flex flex-col gap-12 max-xl:gap-5 max-2xl:gap-8">
           <div className="flex flex-row justify-between">
-            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+            <p className="text-[25px] font-bold max-xl:text-[18px] max-2xl:text-[20px]">
               Camera
             </p>
-            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
+            <p className="w-[80%] text-[16px] leading-10 max-xl:text-[11px] max-xl:leading-8 max-2xl:text-[13px] max-2xl:leading-8">
               FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1{" "}
             </p>
           </div>
           <div className="flex flex-row justify-between">
-            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+            <p className="text-[25px] font-bold max-xl:text-[18px] max-2xl:text-[20px]">
               Lens
             </p>
-            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
+            <p className="w-[80%] text-[16px] leading-10 max-xl:text-[11.5px] max-xl:leading-8  max-2xl:text-[13px] max-2xl:leading-8">
               <span>Sony 16-35mm GM / Sony 50mm GM / Sony 24-105 GM</span>
               <br />
               <span> Sony 70-200 GM2 / Sony 24-70 GM2 / Canon 28-70 RF</span>
             </p>
           </div>
           <div className="flex flex-row justify-between">
-            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+            <p className="text-[25px] font-bold max-xl:text-[18px] max-2xl:text-[20px]">
               Light
             </p>
-            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
+            <p className="w-[80%] text-[16px] leading-10 max-xl:text-[11.5px] max-xl:leading-8  max-2xl:text-[13px] max-2xl:leading-8">
               AMARAN 300 C *2
             </p>
           </div>
           <div className="flex flex-row justify-between">
-            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+            <p className="text-[25px] font-bold max-xl:text-[18px] max-2xl:text-[20px]">
               Gimbal
             </p>
-            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
+            <p className="w-[80%] text-[16px] leading-10 max-xl:text-[11.5px] max-xl:leading-8  max-2xl:text-[13px] max-2xl:leading-8">
               Ronin RS2 pro / Tilta Ring Grip / Crane 3S
             </p>
           </div>
           <div className="flex flex-row justify-between gap-13">
-            <p className="text-[25px] font-bold max-[1440px]:text-[20px]">
+            <p className="text-[25px] font-bold max-xl:text-[18px] max-2xl:text-[20px]">
               Drone
             </p>
-            <p className="w-[80%] text-[16px] leading-10 max-[1440px]:text-[13px] max-[1440px]:leading-8">
+            <p className="w-[80%] text-[16px] leading-10 max-xl:text-[11.5px] max-xl:leading-8  max-2xl:text-[13px] max-2xl:leading-8">
               DJI MAVC 3 Classic{" "}
             </p>
           </div>
@@ -154,19 +125,19 @@ function ABOUT() {
         <div className="h-0.5  w-full border border-white mt-8 mx-auto" />
         <div className=" w-3 h-3 rounded-full bg-white mt-7" />
       </div>
-      <div className="mt-[9.688rem] mb-32 text-center text-[45px]">
+      <div className="mt-[9.688rem] mb-32 text-center text-[45px] max-xl:text-[35px]">
         <p>R.B. FILM 만의 핵심 강점 및 차별성</p>
       </div>
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
-          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
-            <Image src="/assets/images/about2.png" alt="소개사진3" fill />
+          <div className="flex-1 border relative h-[426px] max-xl:h-[273px] max-2xl:h-[314px]">
+            <Image src="/assets/images/about2.png" alt="소개사진2" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-xl:text-[25px] max-2xl:text-[25px]">
               01 체계적이지만 유연함
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>넓은 스펙트럼을 보유한 젊은 인력풀을 구성해</span>
                 <br />
@@ -184,13 +155,13 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-xl:text-[25px] max-2xl:text-[25px]">
               02 합리적인 견적
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>
-                  내부적으로 하이앤드 카메라 [Red Komodo / FX9 / Ronin4D]를
+                  내부적으로 하이엔드 카메라 [Red Komodo / FX9 / Ronin4D]를
                 </span>
                 <br />
                 <span>운용하고 있으며 촬영 목적에 맞는 투입은 물론,</span>
@@ -201,21 +172,21 @@ function ABOUT() {
               </p>
             </div>
           </div>
-          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
-            <Image src="/assets/images/about4.png" alt="소개사진3" fill />
+          <div className="flex-1 border relative h-[426px] max-xl:h-[273px] max-2xl:h-[314px]">
+            <Image src="/assets/images/about4.png" alt="소개사진4" fill />
           </div>
         </div>
       </div>
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
-          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
-            <Image src="/assets/images/about5.png" alt="소개사진3" fill />
+          <div className="flex-1 border relative h-[426px] max-xl:h-[273px] max-2xl:h-[314px]">
+            <Image src="/assets/images/about5.png" alt="소개사진5" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-xl:text-[25px] max-2xl:text-[25px]">
               03 다양한 전문가와의 협력
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>
                   동시 오디오 감독, 드론 촬영 감독, 작가, 자막 등 종편 편집자,
@@ -234,10 +205,10 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-[1440px]:text-[30px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-xl:text-[25px] max-2xl:text-[25px]">
               04 적극적인 제안
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-[1440px]:text-headline3 max-[1440px]:gap-8">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>레퍼런스 및 클라이언트의 니즈 반영은 물론,</span>
                 <br />
@@ -250,15 +221,15 @@ function ABOUT() {
               </p>
             </div>
           </div>
-          <div className="relative flex-1 border h-[360px] max-[1440px]:h-[265px]">
-            <Image src="/assets/images/about6.png" alt="소개사진3" fill />
+          <div className="flex-1 border relative h-[426px] max-xl:h-[273px] max-2xl:h-[314px]">
+            <Image src="/assets/images/about6.png" alt="소개사진6" fill />
           </div>
         </div>
       </div>
       <div className="mt-80">
         <Title title="CLIENTS" content="고객사" />
       </div>
-      <div className="w-[70%] mt-[10.5rem] grid grid-cols-6 mx-auto">
+      <div className="w-[70%] mt-[10.5rem] grid grid-cols-6 mx-auto max-2xl:gap-5">
         {clientData?.DATA?.map((client: ClientProps) => (
           <div key={client.id}>
             <ClientItem title={client.title} url={client.image_url} />
@@ -269,7 +240,7 @@ function ABOUT() {
         <Title title="BIOGRAPHY" content="연혁" />
       </div>
       <div className="mt-[5.5rem]  h-[1360px] mx-auto">
-        <div className="w-[70%] h-full mx-auto">
+        <div className="w-[80%] h-full mx-auto">
           <Image
             src="/assets/images/biography.svg"
             alt="연혁 사진"
@@ -277,7 +248,7 @@ function ABOUT() {
             width={800}
             height={1250}
           />
-          <div className="mt-52">
+          <div className="w-full mt-52">
             <Footer />
           </div>
         </div>
