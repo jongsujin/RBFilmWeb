@@ -4,6 +4,7 @@ import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import Footer from "@/components/Footer/Footer";
+import OurTeamData from "@/data/ourTeamData";
 
 function Service() {
   return (
@@ -122,7 +123,21 @@ function Service() {
       <div className="mt-64">
         <Title title="OUR TEAM" content="" />
       </div>
-      <div className="w-[80%] mx-auto">
+      <div className="grid grid-cols-2 gap-12 mx-auto mt-32 w-[80%] max-xl:gap-16 max-md:gap-24">
+        {OurTeamData.map((teamMember) => (
+          <div
+            key={teamMember.id}
+            className="relative w-[750px] h-[484px] max-md:w-[300px] max-md:h-[200px] max-xl:w-[397px] max-xl:h-[265px] max-2xl:w-[470px] max-2xl:h-[314px]"
+          >
+            <Image
+              src={teamMember.url}
+              alt={`Our Team Member ${teamMember.id}`}
+              fill
+            />
+          </div>
+        ))}
+      </div>
+      <div className="w-[80%] mt-72 mx-auto">
         <Footer />
       </div>
     </div>

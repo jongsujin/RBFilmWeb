@@ -156,7 +156,7 @@ function PortFolio() {
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
               <div
                 key={portfolioItem.id}
-                className="border relative w-full h-[15rem] max-md:h-[139px] max-xl:h-[124px] max-2xl:h-[176px]"
+                className="border relative w-[429px] h-[15rem] max-md:w-[247px] max-md:h-[139px] max-xl:w-[220px] max-xl:h-[124px] max-2xl:w-[313px] max-2xl:h-[176px] xxl:w-[840px] xxl:h-[472.5px]"
               >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
