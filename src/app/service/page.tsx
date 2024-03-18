@@ -123,7 +123,7 @@ function Service() {
       <div className="mt-64">
         <Title title="OUR TEAM" content="" />
       </div>
-      <div className="grid grid-cols-2 gap-12 mx-auto mt-32 w-[80%]">
+      <div className="grid grid-cols-2 gap-12 mx-auto mt-32 w-[80%] max-xl:gap-16 max-md:gap-24">
         {OurTeamData.map((teamMember) => (
           <div
             key={teamMember.id}
