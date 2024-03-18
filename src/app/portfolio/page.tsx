@@ -74,7 +74,7 @@ function PortFolio() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="portfolioBanner.png" />
         </div>
-        <div className="absolute bottom-[-20rem] max-xl:bottom-[-19rem] right-0 left-0 max-2xl:bottom-[-19.5rem]">
+        <div className="absolute bottom-[-20rem] max-md:bottom-[-17.7rem] max-xl:bottom-[-19rem] right-0 left-0 max-2xl:bottom-[-19.5rem]">
           <NavBar tab="PORTFOLIO" />
           <div className="mt-28 mb-56">
             <Title title="PORTFOLIO" content="포트폴리오" />
@@ -83,80 +83,80 @@ function PortFolio() {
       </div>
 
       <div className="mt-72 mb-40">
-        <div className="text-center text-[25px] pt-2 font-pt">
+        <div className="text-center text-[25px] pt-2 font-pt max-md:text-headline2">
           Make Your Film Special
         </div>
       </div>
       <div className="text-center mb-[21rem]">
-        <p className="text-[30px] font-bold">
+        <p className="text-[30px] font-bold max-md:text-[25px]">
           R.B.FILM 2022 Show Reel Celeb ver
         </p>
-        <p className="text-headline1">
+        <p className="text-headline1 max-md:text-headline2">
           2022년 하반기, R.B.FILM 인물 위주 쇼릴 입니다.
         </p>
-        <p className="text-headline1 mt-16">
+        <p className="text-headline1 mt-16 max-md:text-headline3">
           By Ronin 4D 6K / Sony A7S3 / Mavic 3 Classic
         </p>
       </div>
       <Banner bannerImage="portfolio2.png" />
-      <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10">
+      <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10 max-md:gap-7">
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[14px]"
+          className="cursor-pointer max-md:text-[12px] max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Interview", e)}
         >
           Interview
         </button>
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[16px]"
+          className="cursor-pointer max-md:text-[12px]  max-xl:text-[16px]"
           onClick={(e) => handleThemeClick("Event Sketch", e)}
         >
           Event Sketch
         </button>
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[14px]"
+          className="cursor-pointer  max-md:text-[12px] max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("After Movie", e)}
         >
           After Movie
         </button>
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[14px]"
+          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Youtube", e)}
         >
           Youtube
         </button>
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[14px]"
+          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Viral", e)}
         >
           Brand Film / Viral
         </button>
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[14px]"
+          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Performance", e)}
         >
           Performance
         </button>
         <button
           type="button"
-          className="cursor-pointer max-xl:text-[14px]"
+          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("ETC", e)}
         >
           ETC
         </button>
       </div>
       {isItem && isItem ? null : (
-        <div className="w-[70%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto">
+        <div className="w-[70%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto max-md:grid-cols-2">
           {data &&
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
               <div
                 key={portfolioItem.id}
-                className="border relative w-full h-[15rem] max-xl:h-[124px] max-2xl:h-[176px]"
+                className="border relative w-full h-[15rem] max-md:h-[139px] max-xl:h-[124px] max-2xl:h-[176px]"
               >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>
