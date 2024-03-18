@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="fixed w-full top-0  bg-white h-20 pt-5 flex flex-row justify-between z-10 xl:pr-[90px] xl:pl-[90px] 2xl:pr-[154px] pl-[154px] max-md:flex-col max-md:pr-[220px] max-md:pl-[220px]  max-md:justify-center max-md:items-center">
+    <header className=" w-full top-0  bg-white h-20 pt-5 flex flex-row justify-between z-10 xl:pr-[90px] xl:pl-[90px] 2xl:pr-[154px] pl-[154px] max-md:flex-col max-md:pr-[220px] max-md:pl-[220px]  max-md:justify-center max-md:items-center">
       <div className="flex flex-row gap-6">
         <p className="text-headline3 font-semibold pt-[6px] max-md:pt-1">
           R.B FILM
