@@ -7,11 +7,11 @@ interface NavBarProps {
 function NavBar({ tab }: NavBarProps) {
   return (
     <div className="mx-auto w-1/2">
-      <ul className="flex flex-row list-none gap-8 text-headline3 text-white font-semibold justify-center ">
+      <ul className="flex flex-row list-none gap-8 text-headline3 text-white font-semibold justify-center max-md:gap-3">
         <Link href="/about">
           <button
             type="button"
-            className={`text-white font-medium text-headline3 ${tab === "HOME" ? "border-b-2 border-white" : ""}`}
+            className={`text-white font-medium text-headline3 ${tab === "HOME" ? "border-b-2 border-white" : ""} max-md:text-[12px]`}
           >
             HOME
           </button>
@@ -19,7 +19,7 @@ function NavBar({ tab }: NavBarProps) {
         <Link href="/about">
           <button
             type="button"
-            className={`text-white font-medium text-headline3 ${tab === "ABOUT" ? "border-b-2 border-white" : ""}`}
+            className={`text-white font-medium text-headline3 ${tab === "ABOUT" ? "border-b-2 border-white" : ""} max-md:text-[12px]`}
           >
             ABOUT
           </button>
@@ -27,7 +27,7 @@ function NavBar({ tab }: NavBarProps) {
         <Link href="/service">
           <button
             type="button"
-            className={`text-white font-medium text-headline3 ${tab === "SERVICE" ? "border-b-2 border-white" : ""}`}
+            className={`text-white font-medium text-headline3 ${tab === "SERVICE" ? "border-b-2 border-white" : ""} max-md:text-[12px]`}
           >
             SERVICE
           </button>
@@ -35,7 +35,7 @@ function NavBar({ tab }: NavBarProps) {
         <Link href="/portfolio">
           <button
             type="button"
-            className={`text-white font-medium text-headline3 ${tab === "PORTFOLIO" ? "border-b-2 border-white" : ""}`}
+            className={`text-white font-medium text-headline3 ${tab === "PORTFOLIO" ? "border-b-2 border-white" : ""} max-md:text-[12px]`}
           >
             PORTFOLIO
           </button>
@@ -43,7 +43,7 @@ function NavBar({ tab }: NavBarProps) {
         <Link href="/photo">
           <button
             type="button"
-            className={`text-white font-medium text-headline3 ${tab === "PHOTO" ? "border-b-2 border-white" : ""}`}
+            className={`text-white font-medium text-headline3 ${tab === "PHOTO" ? "border-b-2 border-white" : ""} max-md:text-[12px]`}
           >
             PHOTO
           </button>
@@ -51,7 +51,7 @@ function NavBar({ tab }: NavBarProps) {
         <Link href="/contact">
           <button
             type="button"
-            className={`text-white font-medium text-headline3 ${tab === "CONTACT" ? "border-b-2 border-white" : ""}`}
+            className={`text-white font-medium text-headline3 ${tab === "CONTACT" ? "border-b-2 border-white" : ""} max-md:text-[12px]`}
           >
             CONTACT
           </button>
