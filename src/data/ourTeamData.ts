@@ -21,7 +21,7 @@ const OurTeamData = [
   },
   {
     id: 6,
-    url: "/assets/images/ourteam5.png",
+    url: "/assets/images/ourteam5.jpg",
   },
 ];
 
