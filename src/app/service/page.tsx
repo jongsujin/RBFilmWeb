@@ -123,11 +123,11 @@ function Service() {
       <div className="mt-64">
         <Title title="OUR TEAM" content="" />
       </div>
-      <div className="grid grid-cols-2 gap-12 mx-auto mt-32 w-[80%] max-xl:gap-16 max-md:gap-24">
+      <div className="grid grid-cols-2 gap-12 items-center mx-auto mt-32 w-[80%] max-2xl:gap-20 max-xl:gap-16 max-md:gap-24">
         {OurTeamData.map((teamMember) => (
           <div
             key={teamMember.id}
-            className="relative w-[750px] h-[484px] max-md:w-[300px] max-md:h-[200px] max-xl:w-[397px] max-xl:h-[265px] max-2xl:w-[470px] max-2xl:h-[314px]"
+            className="relative w-[750px] h-[500px] max-md:w-[300px] max-md:h-[200px] max-xl:w-[397px] max-xl:h-[265px] max-2xl:w-[470px] max-2xl:h-[314px]"
           >
             <Image
               src={teamMember.url}

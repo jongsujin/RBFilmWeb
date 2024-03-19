@@ -70,7 +70,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              className="cursor-pointer"
+              className="cursor-pointer mt-2"
               src="/assets/images/youtubeLogo.svg"
               alt="유튜브로고"
               width={60}
