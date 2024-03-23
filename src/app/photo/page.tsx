@@ -97,7 +97,7 @@ function Photo() {
           <p className="text-[25px] font-medium mb-8 max-sm:text-[10px] max-md:text-[14px] max-xl:text-headline3 max-2xl:text-headline3">
             {photoItem.photo_subtitle}
           </p>
-          <div className="relative w-[70%] grid grid-cols-2 gap-32 max-sm:w-[80%] max-sm:gap-6">
+          <div className="relative w-[70%] grid grid-cols-2 gap-32 max-sm:w-[90%] max-sm:gap-6">
             {photoItem.photo_url?.map((url: string, index: number) => (
               <div
                 // eslint-disable-next-line react/no-array-index-key

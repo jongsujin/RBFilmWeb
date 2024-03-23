@@ -56,7 +56,7 @@ function Footer() {
             rbfilmofficial@naver.com
           </p>
         </div>
-        <div className="w-1/2 mt-11 ml-48 flex flex-row gap-8 max-sm:ml-32 max-md:w-1/4">
+        <div className="w-1/2 mt-11 ml-48 flex flex-row gap-8 max-sm:ml-32 max-sm:gap-2 max-md:w-1/4">
           <a
             href="https://www.instagram.com/rbfilm_official/?igsh=ZHEwbXFuM2p4cWlj"
             target="_blank"
@@ -76,7 +76,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              className="cursor-pointer mt-2"
+              className="cursor-pointer mt-2 max-sm:mt-1"
               src="/assets/images/youtubeLogo.svg"
               alt="유튜브로고"
               width={60}
