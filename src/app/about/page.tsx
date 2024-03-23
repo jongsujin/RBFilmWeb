@@ -72,11 +72,12 @@ function ABOUT() {
         <Image src="/assets/images/about0.svg" alt="소개1" fill />
       </div>
       <div className="flex flex-row justify-between gap-16 mt-56  mx-auto w-[70%] max-sm:gap-5 max-sm:w-[80%] max-md:w-[90%]">
-        <div className="flex-1 relative h-[426px] max-sm:h-[112px] max-md:h-[192px] max-xl:h-[273px] max-2xl:h-[314px]">
+        <div className="flex-1 relative h-[426px] max-sm:h-[108px] max-md:h-[192px] max-xl:h-[273px] max-2xl:h-[314px]">
           <Image src="/assets/images/about3.png" alt="소개사진2" fill />
         </div>
+
         <div className="flex-1 flex flex-col gap-12 max-sm:gap-2 max-xl:gap-5 max-2xl:gap-8">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between max-sm:gap-2">
             <p className="text-[25px] font-bold max-sm:text-[8px] max-md:text-[12px] max-xl:text-[18px] max-2xl:text-[20px]">
               Camera
             </p>
@@ -84,7 +85,7 @@ function ABOUT() {
               FX9 / Red Komodo 6K / Ronin 4D 6K / Sony A7S3 *2 / Sony A1{" "}
             </p>
           </div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between max-sm:gap-5">
             <p className="text-[25px] font-bold max-sm:text-[8px] max-md:text-[12px] max-xl:text-[18px] max-2xl:text-[20px]">
               Lens
             </p>
@@ -94,7 +95,7 @@ function ABOUT() {
               <span> Sony 70-200 GM2 / Sony 24-70 GM2 / Canon 28-70 RF</span>
             </p>
           </div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between max-sm:gap-[1.2rem]">
             <p className="text-[25px] font-bold max-sm:text-[8px] max-md:text-[12px] max-xl:text-[18px] max-2xl:text-[20px]">
               Light
             </p>
@@ -102,7 +103,7 @@ function ABOUT() {
               AMARAN 300 C *2
             </p>
           </div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between max-sm:gap-3">
             <p className="text-[25px] font-bold max-sm:text-[8px] max-md:text-[12px] max-xl:text-[18px] max-2xl:text-[20px]">
               Gimbal
             </p>
@@ -110,7 +111,7 @@ function ABOUT() {
               Ronin RS2 pro / Tilta Ring Grip / Crane 3S
             </p>
           </div>
-          <div className="flex flex-row justify-between gap-13">
+          <div className="flex flex-row justify-between gap-13 max-sm:gap-4">
             <p className="text-[25px] font-bold max-sm:text-[8px] max-md:text-[12px] max-xl:text-[18px] max-2xl:text-[20px]">
               Drone
             </p>
@@ -121,9 +122,9 @@ function ABOUT() {
         </div>
       </div>
       <div className="flex flex-row mt-48 max-sm:mt-20 w-[70%] mx-auto">
-        <div className=" w-3 h-3 rounded-full bg-white mt-7" />
-        <div className="h-0.5  w-full border border-white mt-8 mx-auto" />
-        <div className=" w-3 h-3 rounded-full bg-white mt-7" />
+        <div className=" w-3 h-3 rounded-full bg-white mt-7 max-sm:w-2 max-sm:h-2" />
+        <div className="h-0.5  w-full border border-white mt-8 mx-auto max-sm:mt-[1.92rem]" />
+        <div className=" w-3 h-3 rounded-full bg-white mt-7  max-sm:w-2 max-sm:h-2" />
       </div>
       <div className="mt-[9.688rem] mb-32 text-center text-[45px] max-sm:mt-20 max-sm:text-headline3 max-md:text-[25px] max-xl:text-[35px]">
         <p>R.B. FILM 만의 핵심 강점 및 차별성</p>
@@ -134,10 +135,10 @@ function ABOUT() {
             <Image src="/assets/images/about2.png" alt="소개사진2" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[12px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[10px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
               01 체계적이지만 유연함
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[6px] max-md:text-[10px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[5px] max-md:text-[10px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>넓은 스펙트럼을 보유한 젊은 인력풀을 구성해</span>
                 <br />
@@ -155,10 +156,10 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[12px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[10px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
               02 합리적인 견적
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[6px] max-md:text-[9px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[5px] max-md:text-[9px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>
                   내부적으로 하이엔드 카메라 [Red Komodo / FX9 / Ronin4D]를
@@ -183,10 +184,10 @@ function ABOUT() {
             <Image src="/assets/images/about5.png" alt="소개사진5" fill />
           </div>
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[12px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[10px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
               03 다양한 전문가와의 협력
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[6px] max-md:text-[9px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[5px] max-md:text-[9px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>
                   동시 오디오 감독, 드론 촬영 감독, 작가, 자막 등 종편 편집자,
@@ -205,10 +206,10 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto">
         <div className="flex flex-row">
           <div className="flex-1 text-center flex flex-col">
-            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[12px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
+            <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[10px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
               04 적극적인 제안
             </p>
-            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[6px] max-md:text-[9px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
+            <div className="border flex-1 flex flex-col justify-center gap-16 text-headline1 max-sm:text-[5px] max-md:text-[9px] max-md:gap-2 max-xl:text-[14px] max-xl:gap-7 max-2xl:text-[16px] max-2xl:gap-10">
               <p>
                 <span>레퍼런스 및 클라이언트의 니즈 반영은 물론,</span>
                 <br />
@@ -226,6 +227,7 @@ function ABOUT() {
           </div>
         </div>
       </div>
+
       <div className="mt-64 max-sm:mt-44">
         <Title title="CLIENTS" content="고객사" />
       </div>
@@ -248,7 +250,7 @@ function ABOUT() {
             width={800}
             height={1250}
           />
-          <div className="w-full mt-52">
+          <div className="w-full mt-52 max-sm:mt-44">
             <Footer />
           </div>
         </div>

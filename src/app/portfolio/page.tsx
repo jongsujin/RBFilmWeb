@@ -74,7 +74,7 @@ function PortFolio() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="portfolioBanner.png" />
         </div>
-        <div className="absolute bottom-[-20rem] max-md:bottom-[-17.7rem] max-xl:bottom-[-19rem] right-0 left-0 max-2xl:bottom-[-19.5rem]">
+        <div className="absolute bottom-[-20rem] max-sm:bottom-[-16.3rem] max-md:bottom-[-17.7rem] max-xl:bottom-[-19rem] right-0 left-0 max-2xl:bottom-[-19rem]">
           <NavBar tab="PORTFOLIO" />
           <div className="mt-28 mb-56">
             <Title title="PORTFOLIO" content="포트폴리오" />
@@ -83,80 +83,80 @@ function PortFolio() {
       </div>
 
       <div className="mt-72 mb-40">
-        <div className="text-center text-[25px] pt-2 font-pt max-md:text-headline2">
+        <div className="text-center max-sm:text-headline3 text-[25px] pt-2 font-pt max-md:text-headline2">
           Make Your Film Special
         </div>
       </div>
       <div className="text-center mb-[21rem]">
-        <p className="text-[30px] font-bold max-md:text-[25px]">
+        <p className="text-[30px] font-bold max-sm:text-[16px] max-md:text-[25px]">
           R.B.FILM 2022 Show Reel Celeb ver
         </p>
-        <p className="text-headline1 max-md:text-headline2">
+        <p className="text-headline1 max-md:text-headline2 max-sm:text-[14px]">
           2022년 하반기, R.B.FILM 인물 위주 쇼릴 입니다.
         </p>
-        <p className="text-headline1 mt-16 max-md:text-headline3">
+        <p className="text-headline1 mt-16 max-sm:text-[14px] max-md:text-headline3">
           By Ronin 4D 6K / Sony A7S3 / Mavic 3 Classic
         </p>
       </div>
       <Banner bannerImage="portfolio2.png" />
-      <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10 max-md:gap-7">
+      <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10 max-md:gap-7  max-sm:gap-3">
         <button
           type="button"
-          className="cursor-pointer max-md:text-[12px] max-xl:text-[14px]"
+          className="cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Interview", e)}
         >
           Interview
         </button>
         <button
           type="button"
-          className="cursor-pointer max-md:text-[12px]  max-xl:text-[16px]"
+          className="cursor-pointer max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[16px]"
           onClick={(e) => handleThemeClick("Event Sketch", e)}
         >
           Event Sketch
         </button>
         <button
           type="button"
-          className="cursor-pointer  max-md:text-[12px] max-xl:text-[14px]"
+          className="cursor-pointer max-sm:text-[8px]  max-md:text-[12px] max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("After Movie", e)}
         >
           After Movie
         </button>
         <button
           type="button"
-          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
+          className="cursor-pointer  max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Youtube", e)}
         >
           Youtube
         </button>
         <button
           type="button"
-          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
+          className="cursor-pointer max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Viral", e)}
         >
           Brand Film / Viral
         </button>
         <button
           type="button"
-          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
+          className="cursor-pointer  max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("Performance", e)}
         >
           Performance
         </button>
         <button
           type="button"
-          className="cursor-pointer max-md:text-[12px]  max-xl:text-[14px]"
+          className="cursor-pointer  max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
           onClick={(e) => handleThemeClick("ETC", e)}
         >
           ETC
         </button>
       </div>
       {isItem && isItem ? null : (
-        <div className="w-[70%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto max-md:grid-cols-2">
+        <div className="w-[70%] mt-56 mb-96 grid grid-cols-3 gap-7 mx-auto max-md:grid-cols-2 max-sm:w-[80%] max-sm:gap-10">
           {data &&
             data?.DATA?.map((portfolioItem: PortFolioItemProps) => (
               <div
                 key={portfolioItem.id}
-                className="border relative w-[429px] h-[15rem] max-md:w-[247px] max-md:h-[139px] max-xl:w-[220px] max-xl:h-[124px] max-2xl:w-[313px] max-2xl:h-[176px] xxl:w-[840px] xxl:h-[472.5px]"
+                className="border relative w-[429px] h-[15rem] max-sm:w-[170px] max-sm:h-[96px] max-md:w-[247px] max-md:h-[139px] max-xl:w-[220px] max-xl:h-[124px] max-2xl:w-[313px] max-2xl:h-[176px] xxl:w-[840px] xxl:h-[472.5px]"
               >
                 <Image src={portfolioItem.image_url} alt="portfolio1" fill />
                 <Link href={`/portfolio/item/${portfolioItem.id}`}>

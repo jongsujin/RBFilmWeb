@@ -42,45 +42,45 @@ function Photo() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="photoBanner.png" />
         </div>
-        <div className="absolute bottom-[-16.2rem] right-0 left-0 max-md:bottom-[-15.2rem] max-xl:bottom-[-15.7rem]">
+        <div className="absolute bottom-[-16.2rem] right-0 left-0 max-sm:bottom-[-14.6rem] max-md:bottom-[-15.2rem] max-xl:bottom-[-15.7rem]">
           <NavBar tab="PHOTO" />
           <div className="mt-28 mb-56">
             <Title title="PHOTO" content="" />
           </div>
         </div>
       </div>
-      <div className="w-full border-t border-b flex flex-row justify-center gap-28 text-center mt-56 p-10 max-md:gap-12">
+      <div className="w-full border-t border-b flex flex-row justify-center gap-28 text-center mt-56 p-10 max-sm:gap-5 max-md:gap-12">
         <button
           type="button"
-          className={`text-white font-medium text-headline3 cursor-pointer ${currentTab === "Festival Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          className={`text-white font-medium text-headline3 max-sm:text-[8px] cursor-pointer ${currentTab === "Festival Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
           onClick={() => handlePhotoThemeClick("Festival Photo")}
         >
           Festival Photo
         </button>
         <button
           type="button"
-          className={`text-white font-medium text-headline3 cursor-pointer ${currentTab === "Personal Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "Personal Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
           onClick={() => handlePhotoThemeClick("Personal Photo")}
         >
           Personal Photo
         </button>
         <button
           type="button"
-          className={`text-white font-medium text-headline3 cursor-pointer ${currentTab === "Sketch Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "Sketch Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
           onClick={() => handlePhotoThemeClick("Sketch Photo")}
         >
           Sketch Photo
         </button>
         <button
           type="button"
-          className={`text-white font-medium text-headline3 cursor-pointer ${currentTab === "Sports Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "Sports Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
           onClick={() => handlePhotoThemeClick("Sports Photo")}
         >
           Sports Photo
         </button>
         <button
           type="button"
-          className={`text-white font-medium text-headline3 cursor-pointer ${currentTab === "ETC" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "ETC" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
           onClick={() => handlePhotoThemeClick("ETC Photo")}
         >
           ETC
@@ -91,18 +91,18 @@ function Photo() {
           key={photoItem.photo_id}
           className="w-full mb-96 flex flex-col items-center"
         >
-          <p className="text-[#707070] font-bold text-9xl mt-24 max-md:text-5xl max-xl:text-8xl max-2xl:text-8xl">
+          <p className="text-[#707070] font-bold text-9xl mt-24 max-sm:text-3xl max-md:text-5xl max-xl:text-8xl max-2xl:text-8xl">
             {photoItem.photo_title}
           </p>
-          <p className="text-[25px] font-medium mb-8 max-md:text-[14px] max-xl:text-headline3 max-2xl:text-headline3">
+          <p className="text-[25px] font-medium mb-8 max-sm:text-[10px] max-md:text-[14px] max-xl:text-headline3 max-2xl:text-headline3">
             {photoItem.photo_subtitle}
           </p>
-          <div className="relative w-[70%] grid grid-cols-2 gap-32">
+          <div className="relative w-[70%] grid grid-cols-2 gap-32 max-sm:w-[80%] max-sm:gap-6">
             {photoItem.photo_url?.map((url: string, index: number) => (
               <div
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
-                className="relative  h-[25rem] max-md:h-[133px] max-xl:h-[162px] max-2xl:h-[288px]"
+                className="relative  h-[25rem] max-sm:w-[170px] max-sm:h-[113px] max-md:h-[133px] max-xl:h-[162px] max-2xl:h-[288px]"
               >
                 <Image
                   src={url}
