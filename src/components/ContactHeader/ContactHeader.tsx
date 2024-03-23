@@ -7,7 +7,7 @@ function ContactHeader() {
       <div />
       <div className="flex flex-row  border-white text-white gap-3 max-sm:items-start max-sm:justify-center">
         <Link href="/contact">
-          <div className="w-[103px] h-10 border border-white text-center mt-4 pt-1 text-headline2 font-medium text-white max-sm:w-16 max-sm:text-[12px] max-sm:h-6 max-sm:pt-1">
+          <div className="w-[103px] h-10 border border-white text-center mt-4 pt-1 text-headline2 font-medium text-white max-sm:w-16 max-sm:text-[12px] max-sm:h-6 max-sm:pt-[0.2rem]">
             견적 문의
           </div>
         </Link>

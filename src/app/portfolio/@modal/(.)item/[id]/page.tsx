@@ -31,28 +31,40 @@ function PortfolioModal() {
     },
   };
   return (
-    <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center">
+    <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center max-sm:w-[90%]">
       <YouTube
-        className="mt-20"
+        className="mt-20 max-sm:w-[90%] max-sm:h-[168px] flex flex-row items-center"
         videoId={data?.url}
         opts={opts}
         onReady={onPlayerReady}
       />
 
       <div className="text-center mt-24">
-        <p className="mb-14 text-[30px] font-medium">{data?.title}</p>
+        <p className="mb-14 text-[30px] max-sm:text-[14px] font-medium">
+          {data?.title}
+        </p>
         {data?.sub_title ? (
-          <p className="mb-14 text-[30px] font-medium">{data?.sub_title}</p>
+          <p className="mb-14 text-[30px] max-sm:text-[14px] font-medium">
+            {data?.sub_title}
+          </p>
         ) : null}
-        <p className="text-headline2">{data?.first_content}</p>
-        <p className="text-headline2">{data?.second_content}</p>
-        <p className="text-headline2">{data?.third_content}</p>
-        <p className="mt-14 last:font-bold text-headline2">Part</p>
-        <p className="mb-14 text-headline2">{data?.part}</p>
+        <p className="text-headline2 max-sm:text-[14px]">
+          {data?.first_content}
+        </p>
+        <p className="text-headline2 max-sm:text-[14px]">
+          {data?.second_content}
+        </p>
+        <p className="text-headline2 max-sm:text-[14px]">
+          {data?.third_content}
+        </p>
+        <p className="mt-14 last:font-bold text-headline2 max-sm:text-[14px]">
+          Part
+        </p>
+        <p className="mb-14 text-headline2 max-sm:text-[14px]">{data?.part}</p>
         <div className="mb-14">
-          <p className="font-bold text-headline2">By</p>
-          <p className="text-headline2">{data?.first_by}</p>
-          <p className="text-headline2">{data?.second_by}</p>
+          <p className="font-bold text-headline2 max-sm:text-[14px]">By</p>
+          <p className="text-headline2 max-sm:text-[14px]">{data?.first_by}</p>
+          <p className="text-headline2 max-sm:text-[14px]">{data?.second_by}</p>
         </div>
       </div>
     </div>
