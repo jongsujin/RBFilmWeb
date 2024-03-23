@@ -27,14 +27,14 @@ function Footer() {
             155, Bundangnaegok-ro, Seongnam-si, Gyeonggi-do, Republic of Korea
           </p>
         </div>
-        <div className="text-start  mb-9">
-          <p className="text-headline2 font-bold max-sm:text-[12px] max-md:text-[14px]">
+        <div className="text-start mb-9">
+          <p className="text-headline2 font-bold max-sm:text-[10px] max-md:text-[14px]">
             주식회사 알비필름
           </p>
-          <span className="text-headline3 max-sm:text-[10px] max-md:text-[12px]">
+          <span className="text-headline3 max-sm:text-[8px] max-md:text-[12px]">
             사업자등록번호
           </span>
-          <span className="pl-5 max-sm:text-[10px] max-md:text-[12px]">
+          <span className="pl-5 max-sm:pl-2 max-sm:text-[8px] max-md:text-[12px]">
             528 86 02650
           </span>
         </div>
