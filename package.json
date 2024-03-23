@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
+    "@lottiefiles/lottie-player": "^2.0.4",
     "@tanstack/react-query": "^5.18.1",
     "@tanstack/react-query-devtools": "^5.18.1",
     "axios": "^1.6.7",
@@ -30,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-lottie": "^1.2.10",
     "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
