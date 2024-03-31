@@ -74,7 +74,6 @@ function PortFolio() {
       queryKey: ["getPrefetchPortfolio", theme],
       queryFn: () => fetchPortfolioTheme(theme),
     });
-    // setSelectedTheme(theme);
   };
   const handleClickTheme = async (theme: string) => {
     setSelectedTheme(theme);
