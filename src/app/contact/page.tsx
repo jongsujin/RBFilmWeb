@@ -43,18 +43,18 @@ function Estimate() {
       </div>
       <div className="w-[70%] flex flex-row justify-between mx-auto max-sm:w-[80%]">
         <div className="w-1/2">
-          <p className="text-[30px] max-sm:text-[12px] font-bold mb-14 max-md:text-headline2 max-xl:text-[25px]">
+          <p className="text-[30px] max-sm:text-[10px] font-bold mb-14 max-md:text-headline2 max-xl:text-[25px]">
             궁금하신 점이 있으신가요?
           </p>
-          <p className="mb-7 max-sm:mb-5 text-headline1 max-sm:text-[8.5px] max-md:text-[14px] max-xl:text-headline3">
+          <p className="mb-7 max-sm:mb-5 text-headline1 max-sm:text-[7.5px] max-md:text-[14px] max-xl:text-headline3">
             R.B.FILM은 어떤 종류의 프로젝트라도
             <br />
             처음부터 끝까지 내 영상을 제작한다는 마인드로 함께합니다.
           </p>
-          <p className="text-headline1 max-sm:text-[8.5px] max-md:text-[14px] max-xl:text-headline3">
+          <p className="text-headline1 max-sm:text-[8px] max-md:text-[14px] max-xl:text-headline3">
             한 번의 비즈니스가 아닌 지속적인 파트너로 함께 성장하기를 바랍니다.
           </p>
-          <p className="text-headline1 max-sm:text-[8.5px] max-md:text-[14px] max-xl:text-headline3">
+          <p className="text-headline1 max-sm:text-[8px] max-md:text-[14px] max-xl:text-headline3">
             좋은 인연이 되었으면 합니다.
           </p>
           <div>
@@ -77,7 +77,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5 max-sm:text-[7px]"
                   type="text"
                 />
               </div>
@@ -95,7 +95,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5 max-sm:text-[7px]"
                   type="email"
                   name="email"
                   required
@@ -115,7 +115,7 @@ function Estimate() {
                   />
                 </div>
                 <input
-                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5 max-sm:text-[7px]"
                   type="text"
                   name="phoneNumber"
                   required
@@ -138,7 +138,7 @@ function Estimate() {
                   정해진 예산이 없다면 &quot;없음&quot;으로 기재해 주세요.
                 </p>
                 <input
-                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5 max-sm:text-[7px]"
                   type="text"
                   name="money"
                   required
@@ -153,7 +153,7 @@ function Estimate() {
                   계신 경우 상단 메일로 보내주세요.
                 </p>
                 <input
-                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5"
+                  className="w-full h-10 border mb-7 border-white bg-black pl-2 max-sm:h-5 max-sm:text-[7px]"
                   type="text"
                   name="referrence"
                 />
@@ -172,7 +172,7 @@ function Estimate() {
                   />
                 </div>
                 <textarea
-                  className="w-full h-52 mb-12 border border-white bg-black pl-2 max-sm:h-24"
+                  className="w-full h-52 mb-12 border border-white bg-black pl-2 max-sm:h-24 max-sm:text-[7px]"
                   name="message"
                   required
                 />
@@ -199,16 +199,16 @@ function Estimate() {
             alt="견적사진1"
           />
           <div className="flex flex-col justify-center items-center mb-20">
-            <p className="text-headline1 mt-20 mb-6 max-sm:text-[9px] max-md:text-[16px]">
+            <p className="text-headline1 mt-20 mb-6 max-sm:text-[8px] max-md:text-[16px]">
               Opening Time / Phone Number
             </p>
-            <p className="text-headline3 max-sm:text-[9px] max-md:text-[14px]">
+            <p className="text-headline3 max-sm:text-[7.5px] max-md:text-[14px]">
               Monday ~ Friday : 00am ~ 24pm
             </p>
-            <p className="text-headline3 max-sm:text-[9px]  max-md:text-[14px]">
+            <p className="text-headline3 max-sm:text-[7.5px]  max-md:text-[14px]">
               Weekend : Online Consultation
             </p>
-            <p className="text-headline3 max-sm:text-[9px]  max-md:text-[14px]">
+            <p className="text-headline3 max-sm:text-[7.5px]  max-md:text-[14px]">
               TEL:+82 10 7712 2492
             </p>
           </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
@@ -17,11 +17,12 @@ interface PhotoItemProps {
 }
 
 function Photo() {
+  const queryClient = useQueryClient();
   const [currentTab, setCurrentTab] = useState("Festival Photo");
   const [selectedPhotoTheme, setSelectedPhotoTheme] =
     useState("Festival Photo");
   console.log(selectedPhotoTheme);
-  const handlePhotoThemeClick = (theme: string) => {
+  const handlePhotoThemeClick = async (theme: string) => {
     setSelectedPhotoTheme(theme);
     setCurrentTab(theme);
   };
@@ -31,6 +32,12 @@ function Photo() {
     enabled: !!selectedPhotoTheme,
   });
 
+  const prefetchPhotoItem = (theme: string) => async () => {
+    await queryClient.prefetchQuery({
+      queryKey: ["fetchPhotoItem", theme],
+      queryFn: () => fetchPhotoItem({ THEME: selectedPhotoTheme }),
+    });
+  };
   if (isLoading) {
     return <div>로딩중</div>;
   }
@@ -42,7 +49,7 @@ function Photo() {
         <div className="mt-20 mb-60">
           <Banner bannerImage="photoBanner.png" />
         </div>
-        <div className="absolute bottom-[-16.2rem] right-0 left-0 max-sm:bottom-[-14.6rem] max-md:bottom-[-15.2rem] max-xl:bottom-[-15.7rem]">
+        <div className="absolute bottom-[-16.2rem] right-0 left-0 max-sm:bottom-[-14.6rem] max-md:bottom-[-15.2rem] max-xl:bottom-[-15.7rem] max-2xl:bottom-[-15.8rem]">
           <NavBar tab="PHOTO" />
           <div className="mt-28 mb-56">
             <Title title="PHOTO" content="" />
@@ -53,6 +60,8 @@ function Photo() {
         <button
           type="button"
           className={`text-white font-medium text-headline3 max-sm:text-[8px] cursor-pointer ${currentTab === "Festival Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          onMouseOver={() => prefetchPhotoItem("Festival Photo")()}
+          onFocus={() => prefetchPhotoItem("Festival Photo")()}
           onClick={() => handlePhotoThemeClick("Festival Photo")}
         >
           Festival Photo
@@ -60,6 +69,8 @@ function Photo() {
         <button
           type="button"
           className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "Personal Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          onMouseOver={() => prefetchPhotoItem("Personal Photo")()}
+          onFocus={() => prefetchPhotoItem("Personal Photo")()}
           onClick={() => handlePhotoThemeClick("Personal Photo")}
         >
           Personal Photo
@@ -67,6 +78,8 @@ function Photo() {
         <button
           type="button"
           className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "Sketch Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          onMouseOver={() => prefetchPhotoItem("Sketch Photo")()}
+          onFocus={() => prefetchPhotoItem("Sketch Photo")()}
           onClick={() => handlePhotoThemeClick("Sketch Photo")}
         >
           Sketch Photo
@@ -74,6 +87,8 @@ function Photo() {
         <button
           type="button"
           className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "Sports Photo" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          onMouseOver={() => prefetchPhotoItem("Sports Photo")()}
+          onFocus={() => prefetchPhotoItem("Sports Photo")()}
           onClick={() => handlePhotoThemeClick("Sports Photo")}
         >
           Sports Photo
@@ -81,6 +96,8 @@ function Photo() {
         <button
           type="button"
           className={`text-white font-medium text-headline3 cursor-pointer max-sm:text-[8px]  ${currentTab === "ETC" ? "border-b-2 border-white" : ""} max-md:text-[12px] max-xl:text-[16px]`}
+          onMouseOver={() => prefetchPhotoItem("ETC Photo")()}
+          onFocus={() => prefetchPhotoItem("ETC Photo")()}
           onClick={() => handlePhotoThemeClick("ETC Photo")}
         >
           ETC

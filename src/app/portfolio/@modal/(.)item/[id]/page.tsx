@@ -33,7 +33,7 @@ function PortfolioModal() {
   return (
     <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center max-sm:w-[90%]">
       <YouTube
-        className="mt-20 max-sm:w-[90%] max-sm:h-[168px] flex flex-row items-center"
+        className="mt-20 max-sm:w-[90%] max-sm:h-[110px] flex flex-row items-center"
         videoId={data?.url}
         opts={opts}
         onReady={onPlayerReady}

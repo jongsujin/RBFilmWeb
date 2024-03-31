@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
@@ -32,25 +32,29 @@ interface PortFolioProps {
   DATA: PortFolioItemProps[];
 }
 function PortFolio() {
+  const queryClient = useQueryClient();
   const router = useRouter();
   const pathname = usePathname();
   const isItem = pathname?.includes("item");
   const [selectedTheme, setSelectedTheme] = useRecoilState(
     portfolioSelectedTheme,
   );
-
-  const handleThemeClick = (
-    theme: string,
-    event: React.MouseEvent<HTMLButtonElement>,
-  ) => {
-    event.preventDefault();
-    const scrollPosition = window.scrollY.toString();
-    sessionStorage.setItem("scrollPosition", scrollPosition); // sessionStorage 사용
-    setSelectedTheme(theme);
-    if (isItem) {
-      router.push("/portfolio");
-    }
-  };
+  const [currentTab, setCurrentTab] = useState("Interview");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [portfolioData, setPortfolioData] = useState<PortFolioItemProps[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // const handleThemeClick = (
+  //   theme: string,
+  //   event: React.MouseEvent<HTMLButtonElement>,
+  // ) => {
+  //   event.preventDefault();
+  //   const scrollPosition = window.scrollY.toString();
+  //   sessionStorage.setItem("scrollPosition", scrollPosition); // sessionStorage 사용
+  //   setSelectedTheme(theme);
+  //   if (isItem) {
+  //     router.push("/portfolio");
+  //   }
+  // };
 
   useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem("scrollPosition");
@@ -60,14 +64,28 @@ function PortFolio() {
   }, []);
 
   const { data, isLoading } = useQuery({
-    queryKey: ["fetchAllPortfolioDatas", selectedTheme],
+    queryKey: ["getPrefetchPortfolio", selectedTheme],
     queryFn: () => fetchPortfolioTheme(selectedTheme),
     enabled: !!selectedTheme,
   });
 
+  const prefetchTheme = (theme: string) => async () => {
+    await queryClient.prefetchQuery({
+      queryKey: ["getPrefetchPortfolio", theme],
+      queryFn: () => fetchPortfolioTheme(theme),
+    });
+  };
+  const handleClickTheme = async (theme: string) => {
+    setSelectedTheme(theme);
+    setCurrentTab(theme);
+    if (isItem) {
+      router.push("/portfolio");
+    }
+  };
   if (isLoading) {
     return <div>로딩중</div>;
   }
+
   return (
     <div className="w-full">
       <div className="relative">
@@ -102,50 +120,64 @@ function PortFolio() {
       <div className="w-full border-t border-b flex flex-row justify-center gap-16 text-center mt-56 p-10 max-md:gap-7  max-sm:gap-3">
         <button
           type="button"
-          className="cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px]"
-          onClick={(e) => handleThemeClick("Interview", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "Interview" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("Interview")()}
+          onFocus={() => prefetchTheme("Interview")()}
+          onClick={() => handleClickTheme("Interview")}
         >
           Interview
         </button>
         <button
           type="button"
-          className="cursor-pointer max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[16px]"
-          onClick={(e) => handleThemeClick("Event Sketch", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "Event Sketch" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("Event Sketch")()}
+          onFocus={() => prefetchTheme("Event Sketch")()}
+          onClick={() => handleClickTheme("Event Sketch")}
         >
           Event Sketch
         </button>
         <button
           type="button"
-          className="cursor-pointer max-sm:text-[8px]  max-md:text-[12px] max-xl:text-[14px]"
-          onClick={(e) => handleThemeClick("After Movie", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "After Movie" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("After Movie")()}
+          onFocus={() => prefetchTheme("After Movie")()}
+          onClick={() => handleClickTheme("After Movie")}
         >
           After Movie
         </button>
         <button
           type="button"
-          className="cursor-pointer  max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
-          onClick={(e) => handleThemeClick("Youtube", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "Youtube" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("Youtube")()}
+          onFocus={() => prefetchTheme("Youtube")()}
+          onClick={() => handleClickTheme("Youtube")}
         >
           Youtube
         </button>
         <button
           type="button"
-          className="cursor-pointer max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
-          onClick={(e) => handleThemeClick("Viral", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "Viral" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("Viral")()}
+          onFocus={() => prefetchTheme("Viral")()}
+          onClick={() => handleClickTheme("Viral")}
         >
           Brand Film / Viral
         </button>
         <button
           type="button"
-          className="cursor-pointer  max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
-          onClick={(e) => handleThemeClick("Performance", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "Performance" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("Performance")()}
+          onFocus={() => prefetchTheme("Performance")()}
+          onClick={() => handleClickTheme("Performance")}
         >
           Performance
         </button>
         <button
           type="button"
-          className="cursor-pointer  max-sm:text-[8px] max-md:text-[12px]  max-xl:text-[14px]"
-          onClick={(e) => handleThemeClick("ETC", e)}
+          className={`cursor-pointer max-sm:text-[8px] max-md:text-[12px] max-xl:text-[14px] ${currentTab === "ETC" ? "border-b-2 border-white" : ""} }`}
+          onMouseOver={() => prefetchTheme("ETC")()}
+          onFocus={() => prefetchTheme("ETC")()}
+          onClick={() => handleClickTheme("ETC")}
         >
           ETC
         </button>
