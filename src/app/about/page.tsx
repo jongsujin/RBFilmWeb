@@ -69,11 +69,16 @@ function ABOUT() {
         ref={svgRef}
         className="relative w-full max-md:ml-0 max-md:mr-0 max-sm:h-[286px] max-ml:h-[512px] max-2xl:h-[853px] 2xl:h-[1024px]"
       >
-        <Image src="/assets/images/about0.svg" alt="소개1" fill />
+        <Image src="/assets/images/about0.svg" alt="소개1" fill priority />
       </div>
       <div className="flex flex-row justify-between gap-16 mt-56  mx-auto w-[70%] max-sm:gap-5 max-sm:w-[80%] max-md:w-[90%]">
-        <div className="flex-1 relative h-[426px] max-sm:h-[108px] max-md:h-[192px] max-xl:h-[273px] max-2xl:h-[314px]">
-          <Image src="/assets/images/about3.png" alt="소개사진2" fill />
+        <div className="flex-1 relative w-[639px] h-[426px] max-sm:w-[162px] max-sm:h-[108px] max-md:w-[288px] max-md:h-[192px] max-xl:w-[410px] max-xl:h-[273px] max-2xl:w-[471px] max-2xl:h-[314px]">
+          <Image
+            src="/assets/images/about3.png"
+            alt="소개사진2"
+            fill
+            sizes="(max-width:480px) 100vw"
+          />
         </div>
 
         <div className="flex-1 flex flex-col gap-12 max-sm:gap-2 max-xl:gap-5 max-2xl:gap-8">
