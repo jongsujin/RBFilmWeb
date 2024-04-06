@@ -1,15 +1,12 @@
 "use client";
 
 import React from "react";
+import ReactPlayer from "react-player";
 import { usePathname } from "next/navigation";
-// import Image from "next/image";
-import YouTube, { YouTubeProps } from "react-youtube";
 import { useRecoilValue } from "recoil";
 import { useQuery } from "@tanstack/react-query";
 import portfolioSelectedTheme from "@/recoil/atom";
 import fetchPortfolioItem from "@/api/fetchPortfolioItem";
-
-// import { useRouter } from "next/navigation";
 
 function PortfolioModal() {
   const selectedTheme = useRecoilValue(portfolioSelectedTheme);
@@ -20,24 +17,20 @@ function PortfolioModal() {
     queryKey: ["fetchPortfolioItem", id],
     queryFn: () => fetchPortfolioItem({ THEME: selectedTheme, id }),
   });
-  const onPlayerReady: YouTubeProps["onReady"] = (event) => {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  };
 
-  const opts: YouTubeProps["opts"] = {
-    playerVars: {
-      autoplay: 0,
-    },
-  };
   return (
     <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center max-sm:w-[90%]">
-      <YouTube
-        className="mt-20 max-sm:w-[90%] max-sm:h-[110px] flex flex-row items-center"
-        videoId={data?.url}
-        opts={opts}
-        onReady={onPlayerReady}
-      />
+      <div className="relative mt-11 pt-[50.625%] w-[90%]">
+        {" "}
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=SOBm93skeko"
+          className="react-player absolute top-0 left-0"
+          width="100%"
+          height="100%"
+          playing
+          controls
+        />
+      </div>
 
       <div className="text-center mt-24">
         <p className="mb-14 text-[30px] max-sm:text-[14px] font-medium">

@@ -42,19 +42,6 @@ function PortFolio() {
   const [currentTab, setCurrentTab] = useState("Interview");
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [portfolioData, setPortfolioData] = useState<PortFolioItemProps[]>([]);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const handleThemeClick = (
-  //   theme: string,
-  //   event: React.MouseEvent<HTMLButtonElement>,
-  // ) => {
-  //   event.preventDefault();
-  //   const scrollPosition = window.scrollY.toString();
-  //   sessionStorage.setItem("scrollPosition", scrollPosition); // sessionStorage 사용
-  //   setSelectedTheme(theme);
-  //   if (isItem) {
-  //     router.push("/portfolio");
-  //   }
-  // };
 
   useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem("scrollPosition");
@@ -67,6 +54,11 @@ function PortFolio() {
     queryKey: ["getPrefetchPortfolio", selectedTheme],
     queryFn: () => fetchPortfolioTheme(selectedTheme),
     enabled: !!selectedTheme,
+  });
+
+  const { data: showReelData } = useQuery({
+    queryKey: ["getFetchShowReel"],
+    queryFn: () => fetchPortfolioTheme("Showreel"),
   });
 
   const prefetchTheme = (theme: string) => async () => {
@@ -112,6 +104,26 @@ function PortFolio() {
         <p className="text-headline1 max-md:text-headline2 max-sm:text-[14px]">
           2022년 하반기, R.B.FILM 인물 위주 쇼릴 입니다.
         </p>
+        <div className="flex flex-row justify-center gap-36 mt-20">
+          {showReelData &&
+            showReelData?.DATA?.map((portfolioItem: PortFolioItemProps) => (
+              <div
+                key={portfolioItem.id}
+                className="border relative w-[429px] h-[15rem] max-sm:w-[170px] max-sm:h-[96px] max-md:w-[247px] max-md:h-[139px] max-xl:w-[220px] max-xl:h-[124px] max-2xl:w-[313px] max-2xl:h-[176px] xxl:w-[840px] xxl:h-[472.5px]"
+              >
+                <Image src={portfolioItem.image_url} alt="portfolio1" fill />
+                <Link href={`/portfolio/item/${portfolioItem.id}`}>
+                  <Image
+                    src="/assets/images/playerBtn32.svg"
+                    alt="재생버튼"
+                    width={32}
+                    height={32}
+                    className="absolute top-[45%] left-[45%] max-xl:w-5 max-xl:h-5 2xl:w-12 2xl:h-12"
+                  />
+                </Link>
+              </div>
+            ))}
+        </div>
         <p className="text-headline1 mt-16 max-sm:text-[14px] max-md:text-headline3">
           By Ronin 4D 6K / Sony A7S3 / Mavic 3 Classic
         </p>
