@@ -18,12 +18,17 @@ function PortfolioModal() {
     queryFn: () => fetchPortfolioItem({ THEME: selectedTheme, id }),
   });
 
+  // const { data: showReelData } = useQuery({
+  //   queryKey: ["fetchPortfolioItem", id],
+  //   queryFn: () => fetchPortfolioItem({ THEME: "Showreel", id }),
+  // });
+  // console.log("ShowReelData :", showReelData);
   return (
     <div className="w-2/3 border mt-52 mx-auto flex flex-col items-center max-sm:w-[90%]">
       <div className="relative mt-11 pt-[50.625%] w-[90%]">
         {" "}
         <ReactPlayer
-          url="https://www.youtube.com/watch?v=SOBm93skeko"
+          url={data?.url}
           className="react-player absolute top-0 left-0"
           width="100%"
           height="100%"
