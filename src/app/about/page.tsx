@@ -69,11 +69,21 @@ function ABOUT() {
         ref={svgRef}
         className="relative w-full max-md:ml-0 max-md:mr-0 max-sm:h-[286px] max-ml:h-[512px] max-2xl:h-[853px] 2xl:h-[1024px]"
       >
-        <Image src="/assets/images/about01.png" alt="소개1" fill />
+        <Image
+          src="/assets/images/about01.png"
+          alt="소개1"
+          fill
+          // placeholder="blur"
+        />
       </div>
       <div className="flex flex-row justify-between gap-16 mt-56  mx-auto w-[70%] max-sm:gap-5 max-sm:w-[80%] max-md:w-[90%]">
         <div className="flex-1 relative w-[639px] h-[426px] max-sm:w-[162px] max-sm:h-[108px] max-md:w-[288px] max-md:h-[192px] max-xl:w-[410px] max-xl:h-[273px] max-2xl:w-[471px] max-2xl:h-[314px]">
-          <Image src="/assets/images/about3.png" alt="소개사진2" fill />
+          <Image
+            src="/assets/images/about3.png"
+            alt="소개사진2"
+            fill
+            // placeholder="blur"
+          />
         </div>
 
         <div className="flex-1 flex flex-col gap-12 max-sm:gap-2 max-xl:gap-5 max-2xl:gap-8">
@@ -132,7 +142,12 @@ function ABOUT() {
       <div className="border mb-60 flex flex-col w-[70%] mx-auto max-sm:w-[80%] max-sm:gap-2">
         <div className="flex flex-row">
           <div className="flex-1 border relative h-[426px] max-sm:h-[112px] max-md:h-[174px] max-xl:h-[273px] max-2xl:h-[314px]">
-            <Image src="/assets/images/about2.png" alt="소개사진2" fill />
+            <Image
+              src="/assets/images/about2.png"
+              alt="소개사진2"
+              fill
+              // placeholder="blur"
+            />
           </div>
           <div className="flex-1 text-center flex flex-col">
             <p className="border-b pt-5 pb-5 text-[35px] font-bold max-sm:pb-2 max-sm:pt-2 max-sm:text-[10px] max-md:text-[18px] max-xl:text-[25px] max-2xl:text-[25px]">
@@ -249,6 +264,7 @@ function ABOUT() {
             layout="responsive"
             width={800}
             height={1250}
+            // placeholder="blur"
           />
           <div className="w-full mt-52 max-sm:mt-44">
             <Footer />
