@@ -15,6 +15,8 @@ const config: Config = {
       black: "#000000",
       white: "#FFFFFF",
       gray: "#707070",
+      skeletonBase: "#e0e0e0",
+      skeletonHighlight: "#f8f9fa",
     },
     extend: {
       fontSize: {
@@ -44,6 +46,15 @@ const config: Config = {
         xxl: "1921px",
         xxxl: "2300px",
       },
+    },
+  },
+  animation: {
+    pulse: "pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+  },
+  keyframes: {
+    pulse: {
+      "0%, 100%": { backgroundPosition: "200% 0" },
+      "50%": { backgroundPosition: "0% 0" },
     },
   },
   plugins: [],
