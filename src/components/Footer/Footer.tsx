@@ -5,9 +5,16 @@ function Footer() {
   return (
     <div className="flex flex-row items-center text-center justify-between">
       <div className="flex flex-col justify-center">
-        <div className="border w-56 h-24 p-8 mb-14 max-sm:text-[6px] max-sm:w-20 max-sm:h-10 max-md:w-32 max-md:h-12 max-md:text-[10px] max-md:p-4">
+        {/* <div className="border w-56 h-24 p-8 mb-14 max-sm:text-[6px] max-sm:w-20 max-sm:h-10 max-md:w-32 max-md:h-12 max-md:text-[10px] max-md:p-4">
           R.B.FILM Logo
-        </div>
+        </div> */}
+        <Image
+          className="mb-14"
+          src="/assets/images/rbfilmLogo.png"
+          alt="RBFILM LOGO"
+          width={160}
+          height={40}
+        />
         <div className="text-start  mb-9">
           <p className="text-headline2 font-bold max-sm:text-[10px] max-md:text-[14px]">
             R.B.FILM{" "}

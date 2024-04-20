@@ -6,6 +6,9 @@ import TanstackQueryProvider from "@/components/Provider/TanstackQueryProvider";
 export const metadata: Metadata = {
   title: "RBFilm",
   description: "RBFilm, Creator and Contents Director Web Site",
+  icons: {
+    icon: "/next.svg",
+  },
 };
 export type RootLayoutProps = { children: React.ReactNode };
 export default function RootLayout({ children }: RootLayoutProps) {
