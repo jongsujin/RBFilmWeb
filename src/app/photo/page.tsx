@@ -8,6 +8,7 @@ import NavBar from "@/components/NavBar/NavBar";
 import Title from "@/components/Title/Title";
 import fetchPhotoItem from "@/api/fetchPhotoItem";
 import Footer from "@/components/Footer/Footer";
+import Loading from "@/components/Loading/Loading";
 
 interface PhotoItemProps {
   photo_id: number;
@@ -39,7 +40,7 @@ function Photo() {
     });
   };
   if (isLoading) {
-    return <div>로딩중</div>;
+    return <Loading />;
   }
   console.log(data);
   console.log(data.DATA);
