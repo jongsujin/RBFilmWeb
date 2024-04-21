@@ -129,7 +129,7 @@ function PortFolio() {
                   alt="재생버튼"
                   width={32}
                   height={32}
-                  className="absolute top-[45%] left-[45%] max-xl:w-5 max-xl:h-5 2xl:w-12 2xl:h-12"
+                  className="cursor-pointer absolute top-[45%] left-[45%] max-xl:w-5 max-xl:h-5 2xl:w-12 2xl:h-12"
                   onClick={() => handleShowReelClick(portfolioItem)}
                 />
               </div>
