@@ -9,13 +9,15 @@ function Header() {
   return (
     <header className="w-full top-0  bg-white h-20 pt-5 flex flex-row justify-between z-10 max-sm:pr-0 max-sm:pl-0 xl:pr-[90px] xl:pl-[90px] 2xl:pr-[154px] pl-[154px] max-md:flex-col max-md:pr-[220px] max-md:pl-[220px]  max-md:justify-center max-md:items-center">
       <div className="flex flex-row gap-6">
-        <Image
-          className="pb-6 pr-3"
-          src="/assets/images/rbfilmLogoBlack.png"
-          alt="RBFILM LOGO"
-          width={140}
-          height={41}
-        />
+        <Link href="/">
+          <Image
+            className="pb-6 pr-3 cursor-pointer"
+            src="/assets/images/rbfilmLogoBlack.png"
+            alt="RBFILM LOGO"
+            width={140}
+            height={41}
+          />
+        </Link>
         <a
           href={pdfUrl}
           className="border border-black w-28 h-10 font-medium text-headline2 max-sm:w-16 max-sm:h-6 max-sm:text-[12px] max-md:text-[14px] max-md:w-20 max-md:h-8 flex justify-center items-center"
